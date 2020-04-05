@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&display=swap&subset=cyrillic');
+
+* {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+p {
+    font-size: 1.1em;
+}
+
+.bg-plate {
+    background-color: #47c25b;
+    color: white;
+}
+.plate {
+    padding: 20px 20px;
+    
+    h3 {
+        text-decoration: underline;
+        text-decoration-style: solid;
+        text-decoration-color: #47c25b;
+        -moz-text-decoration-color: #47c25b;
+        -moz-text-decoration-style: solid;
+    }
+}
+
+.plate-plans {
+
+    .item {
+        padding-top: 15px;
+        background-color: #ffffff;
+        font-weight: 300;
+        
+        p {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .icon {
+            text-align: center;
+            margin-top: 10px;
+            color: #47c25b;
+        }
+    }
+
+    .item:not(:last-child) {
+        border-right: solid #adadad;
+    }
+}
+
+@media(max-width: 991px) {
+    .plate-plans {
+
+        .item {
+            padding-top: 15px;
+            background-color: #ffffff;
+            font-weight: 300;
+            
+            p {
+                text-align: justify;
+            }
+        }
+    
+        .item:not(:last-child) {
+            border-right: none;
+            border-bottom: solid #adadad 1px;
+        }
+    }
+}

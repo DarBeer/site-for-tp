@@ -13,6 +13,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeDashboardComponent } from './dashboard/home-dashboard/home-dashboard.component';
 import { UsersDashboardComponent } from './dashboard/users-dashboard/users-dashboard.component';
 import { ArticlesDashboardComponent } from './dashboard/articles-dashboard/articles-dashboard.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { ArticlesDashboardComponent } from './dashboard/articles-dashboard/artic
     HomeDashboardComponent,
     UsersDashboardComponent,
     ArticlesDashboardComponent,
+    NotFoundComponent,
   ],
   imports: [
     MDBBootstrapModule.forRoot(),
