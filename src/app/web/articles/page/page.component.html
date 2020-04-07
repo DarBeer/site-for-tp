@@ -1,0 +1,27 @@
+<div class="img-container">
+    <img src="{{article.urlImage}}" alt="Snow" class="full-screan">
+    <div class="centered">
+        <h2>{{article.heading}}</h2>
+        <p>{{article.shortDescription}}</p>
+    </div>
+</div>
+
+<div class="container article-wrap">
+    <div class="row">
+        <div class="col-12" >
+            <div class="articleheading">
+                <h2>{{article.heading}}</h2>
+                <span>Опубликовано: {{article.date | date:'dd MMM, yyyy HH:mm'}}</span>
+            </div>
+            <div [froalaView]="article.description"></div>
+        </div>
+    </div>
+</div>
+
+<div class="container article-wrap">
+    <div class="row">
+        <div class="col-12" >
+            <a class="go-home" (click)="goBack()" ><i class="fas fa-arrow-left"></i>Вернуться</a>
+        </div>
+    </div>
+</div>

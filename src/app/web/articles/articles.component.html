@@ -1,1 +1,29 @@
-<p>articles works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-3 col-md-12 mt-2 mb-2" *ngFor="let article of articles">
+      <mdb-card>
+        <div class="view rgba-white-slight waves-light" mdbWavesEffect>
+          <!-- Card img -->
+          <mdb-card-img src="{{article.urlImage}}" alt="Card image cap"></mdb-card-img> 
+          <a>
+            <div class="mask"></div>
+          </a>
+        </div>
+        <!--Card content-->
+        <mdb-card-body>
+          <!--Title-->
+          <mdb-card-title>
+            <h4>{{article.heading}}</h4>
+          </mdb-card-title>
+      
+          <!--Text-->
+          <mdb-card-text> 
+            {{article.shortDescription}}
+          </mdb-card-text>
+      
+          <a href="#" mdbBtn class="button" routerLink="/articles/{{article._id}}" mdbWavesEffect>Читать далее</a>
+        </mdb-card-body>
+      </mdb-card>
+    </div>
+  </div>
+</div>

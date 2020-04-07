@@ -7,7 +7,6 @@ $grean: #47c25b;
 }
 
 * {
-    font-family: 'Ubuntu', sans-serif;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     -webkit-transition: all 0.35s ease;
@@ -22,7 +21,8 @@ $grean: #47c25b;
   a {
     text-align: center;
     display: inline-block;
-    font-weight: 400;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
     font-size: large;
     padding: 0.5em 17px;
     color: rgba(255, 255, 255, 0.5);

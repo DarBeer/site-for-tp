@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+
+import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +17,7 @@ import { HomeDashboardComponent } from './dashboard/home-dashboard/home-dashboar
 import { UsersDashboardComponent } from './dashboard/users-dashboard/users-dashboard.component';
 import { ArticlesDashboardComponent } from './dashboard/articles-dashboard/articles-dashboard.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { PageComponent } from './web/articles/page/page.component';
 
 @NgModule({
   declarations: [
@@ -28,11 +32,15 @@ import { NotFoundComponent } from './not-found/not-found.component';
     UsersDashboardComponent,
     ArticlesDashboardComponent,
     NotFoundComponent,
+    PageComponent,
   ],
   imports: [
+    FroalaEditorModule.forRoot(), 
+    FroalaViewModule.forRoot(),
     MDBBootstrapModule.forRoot(),
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
