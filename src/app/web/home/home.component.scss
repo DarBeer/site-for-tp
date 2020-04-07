@@ -1,7 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&display=swap&subset=cyrillic');
 
+.full-screan {
+    max-height: calc(100vh - 89px);
+    width: 100%;
+  }
+
 * {
     font-family: 'Ubuntu', sans-serif;
+}
+
+.carousel-caption {
+    h3 {
+        font-size: 3.3em;
+    }
+    
+    p {
+        font-size: 1.7em;
+    }
 }
 
 p {
@@ -10,18 +25,12 @@ p {
 
 .bg-plate {
     background-color: #47c25b;
-    color: white;
+    color: white !important;
 }
+
 .plate {
     padding: 20px 20px;
-    
-    h3 {
-        text-decoration: underline;
-        text-decoration-style: solid;
-        text-decoration-color: #47c25b;
-        -moz-text-decoration-color: #47c25b;
-        -moz-text-decoration-style: solid;
-    }
+    color: #303030;
 }
 
 .plate-plans {

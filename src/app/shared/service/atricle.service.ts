@@ -24,7 +24,7 @@ export class ArticleService {
 
     // GET article
     getArticle(id:any): Observable<Article> {
-        const uri = 'http://localhost:3000/data/articles/' + id;
+        const uri = 'http://localhost:3000/data/articles/get-one/' + id;
         return this
             .http
             .get<Article>(uri)
@@ -33,15 +33,15 @@ export class ArticleService {
             }));
     }
 
-    // getArticleLast(): Observable<Article> {
-    //     const uri = 'http://localhost:3000/data/articles/last';
-    //     return this
-    //         .http
-    //         .get<Article>(uri)
-    //         .map(res => {
-    //             return res;
-    //         });
-    // }
+    getArticlesLast(): Observable<Article[]> {
+        const uri = 'http://localhost:3000/data/articles/last';
+        return this
+            .http
+            .get<Article[]>(uri)
+            .pipe(map(res => {
+              return res;
+            }));
+    }
 
     // ADD article
     addArticle(heading, description, shortDescription, imageName, img): Observable<Article> {

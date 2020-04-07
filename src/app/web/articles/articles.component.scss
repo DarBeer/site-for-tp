@@ -1,6 +1,10 @@
 $grean: #47c25b;
 $white: #ffffff;
 
+* {
+    font-family: 'Ubuntu', sans-serif;
+}
+
 .button {
     background-color: $grean;
     color: $white;
