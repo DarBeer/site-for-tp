@@ -1,21 +1,35 @@
-<div class="sidebar">
-    <ul class="items mb-auto">
-        <li class="item">
-            <a class="nav-link" routerLink="/dashboard" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">{{home}}</a>
-        </li>
-        <li class="item" *ngFor="let link of linkList" >
-            <a class="link" routerLink="{{link.link}}" routerLinkActive="active">{{link.name}}</a>
-        </li>
-    </ul>
-    <a class="link mt-auto" routerLink="/">Выход</a>
-</div>
-  
-<div class="content">
-    <div class="container-fluid">
-        <mdb-breadcrumb>
-            <mdb-breadcrumb-item class="blue-text">Технопарк «Полесье»</mdb-breadcrumb-item>
-            <mdb-breadcrumb-item class="active">Админ-панель</mdb-breadcrumb-item>
-        </mdb-breadcrumb>
-        <router-outlet></router-outlet>
+<div class="s-layout">
+    <!-- Sidebar -->
+    <div class="s-layout__sidebar">
+      <a class="s-sidebar__trigger" >
+         <i class="fa fa-bars"></i>
+      </a>
+    
+      <nav class="s-sidebar__nav">
+         <ul>
+            <li>
+                <a class="s-sidebar__nav-link" routerLinkActive="active" routerLink="/dashboard" [routerLinkActiveOptions]="{exact: true}">
+                    <em>Статистика</em>
+                </a>
+            </li>
+            <li *ngFor="let item of linkList">
+               <a class="s-sidebar__nav-link" routerLinkActive="active" routerLink="{{item.link}}">
+                  <em>{{item.name}}</em>
+               </a>
+            </li>
+            <li>
+                <a class="s-sidebar__nav-link" routerLink="">
+                    <em>Выйти</em>
+                </a>
+            </li>
+         </ul>
+      </nav>
     </div>
+    
+    <!-- Content -->
+    <main class="s-layout__content">
+        <div class="container-fluid">
+            <router-outlet></router-outlet>
+        </div>
+    </main>
 </div>

@@ -1,1 +1,28 @@
-<p>articles-dashboard works!</p>
+<table mdbTable #tableEl="mdbTable" class="z-depth-1">
+    <thead>
+    <tr>
+      <th *ngFor="let head of headElements; let i = index" scope="col">{{head}}
+      </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let el of articles; let i = index">
+      <th *ngIf="i+1 >= mdbTablePagination.firstItemIndex && i < mdbTablePagination.lastItemIndex">
+        <img class="img-fluid table-img" src="{{el.urlImage}}" alt="Load">
+      </th>
+      <td *ngIf="i+1 >= mdbTablePagination.firstItemIndex && i < mdbTablePagination.lastItemIndex"
+          scope="row">{{el._id}}</td>
+      <td *ngIf="i+1 >= mdbTablePagination.firstItemIndex && i < mdbTablePagination.lastItemIndex">{{el.heading}}</td>
+      <td *ngIf="i+1 >= mdbTablePagination.firstItemIndex && i < mdbTablePagination.lastItemIndex">{{el.description}}</td>
+      <td *ngIf="i+1 >= mdbTablePagination.firstItemIndex && i < mdbTablePagination.lastItemIndex">{{el.date | date:'dd.MM.yy HH:mm'}}</td>
+      <td *ngIf="i+1 >= mdbTablePagination.firstItemIndex && i < mdbTablePagination.lastItemIndex"><button type="button" (click)="delArticle(article._id)" mdbBtn color="primary" mdbWavesEffect>УДАЛИТЬ</button></td>
+    </tr>
+    </tbody>
+    <tfoot class="grey lighten-5 w-100">
+    <tr>
+      <td colspan="5">
+        <mdb-table-pagination [tableEl]="tableEl" [searchDataSource]="articles"></mdb-table-pagination>
+      </td>
+    </tr>
+    </tfoot>
+  </table>
