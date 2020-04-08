@@ -18,6 +18,8 @@ import { UsersDashboardComponent } from './dashboard/users-dashboard/users-dashb
 import { ArticlesDashboardComponent } from './dashboard/articles-dashboard/articles-dashboard.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { PageComponent } from './web/articles/page/page.component';
+import { ToastrModule } from 'ngx-toastr';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -35,12 +37,16 @@ import { PageComponent } from './web/articles/page/page.component';
     PageComponent,
   ],
   imports: [
+    ToastrModule.forRoot({
+      positionClass: 'toast-bottom-right'
+    }),
     FroalaEditorModule.forRoot(), 
     FroalaViewModule.forRoot(),
     MDBBootstrapModule.forRoot(),
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

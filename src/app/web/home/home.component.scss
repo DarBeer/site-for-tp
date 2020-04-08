@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&display=swap&subset=cyrillic');
 
 .full-screan {
-    max-height: calc(100vh - 89px);
+    height: calc(100vh - 89px);
     width: 100%;
-  }
+}
 
 * {
     font-family: 'Ubuntu', sans-serif;
@@ -58,6 +58,11 @@ p {
 }
 
 @media(max-width: 991px) {
+    .full-screan {
+        max-height: calc(100vh - 89px);
+        width: 100wv;
+    }
+
     .plate-plans {
 
         .item {

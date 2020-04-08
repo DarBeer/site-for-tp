@@ -6,23 +6,71 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let el of articles; let i = index">
+    <tr *ngFor="let el of articles; let i = index;">
       <th *ngIf="i+1 >= mdbTablePagination.firstItemIndex && i < mdbTablePagination.lastItemIndex">
-        <img class="img-fluid table-img" src="{{el.urlImage}}" alt="Load">
+        <img class="img-fluid table-img" src="{{el.urlImage}}" alt="Error">
       </th>
       <td *ngIf="i+1 >= mdbTablePagination.firstItemIndex && i < mdbTablePagination.lastItemIndex"
           scope="row">{{el._id}}</td>
       <td *ngIf="i+1 >= mdbTablePagination.firstItemIndex && i < mdbTablePagination.lastItemIndex">{{el.heading}}</td>
-      <td *ngIf="i+1 >= mdbTablePagination.firstItemIndex && i < mdbTablePagination.lastItemIndex">{{el.description}}</td>
+      <td class="d-inline-block text-truncate" style="max-width: 300px;" *ngIf="i+1 >= mdbTablePagination.firstItemIndex && i < mdbTablePagination.lastItemIndex">{{el.description}}</td>
       <td *ngIf="i+1 >= mdbTablePagination.firstItemIndex && i < mdbTablePagination.lastItemIndex">{{el.date | date:'dd.MM.yy HH:mm'}}</td>
-      <td *ngIf="i+1 >= mdbTablePagination.firstItemIndex && i < mdbTablePagination.lastItemIndex"><button type="button" (click)="delArticle(article._id)" mdbBtn color="primary" mdbWavesEffect>УДАЛИТЬ</button></td>
+      <td *ngIf="i+1 >= mdbTablePagination.firstItemIndex && i < mdbTablePagination.lastItemIndex"><button type="button" (click)="delArticle(el._id)" mdbBtn color="primary" mdbWavesEffect>УДАЛИТЬ</button></td>
     </tr>
     </tbody>
     <tfoot class="grey lighten-5 w-100">
     <tr>
-      <td colspan="5">
+      <td colspan="6">
         <mdb-table-pagination [tableEl]="tableEl" [searchDataSource]="articles"></mdb-table-pagination>
       </td>
     </tr>
     </tfoot>
   </table>
+
+  <form class="row" [formGroup]="articleForm" (submit)="addArticle(heading.value, editorContent, shortDescription.value)" novalidate>
+    <div class="col-md-8">
+        <div class="form-group col-md-12">
+            <label>Заголовок</label>
+            <input type="text" class="form-control" formControlName="heading" #heading />
+            <div *ngIf="articleForm.controls['heading'].invalid && (articleForm.controls['heading'].dirty || articleForm.controls['heading'].touched)" class="alert alert-danger">
+                <div *ngIf="articleForm.controls['heading'].errors.required">
+                    Необходимо заполнить заголовок!
+                </div>
+            </div>
+        </div>
+        <div class="form-group col-md-12">
+            <label>Описание</label>
+            <!--<input type="text" class="form-control" formControlName="description" #description/>-->
+            <div [froalaEditor] [(froalaModel)]="editorContent"></div>
+            <!--<div *ngIf="articleForm.controls['description'].invalid && (articleForm.controls['description'].dirty || articleForm.controls['description'].touched)" class="alert alert-danger">
+                <div *ngIf="articleForm.controls['description'].errors.required">
+                    Необходимо заполнить описание!
+                </div>
+            </div>-->
+        </div>
+        <div class="form-group col-md-12">
+            <label>Короткое описание</label>
+            <textarea type="text" class="form-control" formControlName="shortDescription" rows="3" #shortDescription></textarea>
+            <div *ngIf="articleForm.controls['shortDescription'].invalid && (articleForm.controls['shortDescription'].dirty || articleForm.controls['shortDescription'].touched)" class="alert alert-danger">
+                <div *ngIf="articleForm.controls['shortDescription'].errors.required">
+                    Необходимо заполнить короткое описание!
+                </div>
+            </div>
+        </div>
+        <div class="form-group col-md-12">
+            <label>Загрузка</label>
+            <input type="file" class="form-control" formControlName="urlImage" accept="image/*" (change)="onSelectedFile($event)"  name="articleImage" #urlImage/>
+        </div>
+        <div class="form-group col-md-12">
+            <button type="submit"  [disabled]="articleForm.pristine || articleForm.invalid" class="btn btn-primary">Добавить</button>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="col-md-12 image-container">
+            <label>Изображение</label>
+            <div class="img-preview">
+                <img [src]="imageDef">
+            </div>
+        </div>
+    </div>
+</form>

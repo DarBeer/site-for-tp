@@ -1,6 +1,7 @@
 import { MdbTablePaginationComponent, MdbTableDirective } from 'angular-bootstrap-md';
 
 import { Component, OnInit, ViewChild, HostListener, AfterViewInit, ChangeDetectorRef } from '@angular/core';
+import { FormGroup,  FormBuilder,  Validators } from "@angular/forms";
 
 import { ToastrService } from 'ngx-toastr';
 
@@ -22,15 +23,16 @@ export class ArticlesDashboardComponent implements OnInit, AfterViewInit {
   previous: any = [];
   headElements = ['Изображение', 'ID', 'Название', 'Содержание', 'Дата', ' '];
 
-  constructor(private cdRef: ChangeDetectorRef, private service: ArticleService, private toastr: ToastrService) { }
+  articleForm: FormGroup;
+  editorContent: string;
+  imageFile: File = null;
+  imageDef: string ='../../../assets/img/noimage.png';
+
+  constructor(private cdRef: ChangeDetectorRef, private service: ArticleService, private toastr: ToastrService,
+    private form: FormBuilder) { this.createForm(); }
 
   ngOnInit() {
-
     this.getArticles();
-
-    this.mdbTable.setDataSource(this.articles);
-    this.articles = this.mdbTable.getDataSource();
-    this.previous = this.mdbTable.getDataSource();
   }
 
   ngAfterViewInit() {
@@ -41,12 +43,24 @@ export class ArticlesDashboardComponent implements OnInit, AfterViewInit {
     this.cdRef.detectChanges();
   }
 
+  createForm() {
+    this.articleForm = this.form.group({
+        heading: ['', Validators.required ],
+        description: [''],
+        shortDescription: ['', Validators.required ],
+        urlImage: [''],
+    });
+}
+
   getArticles(): void {
     this.service.getArticles()
                 .subscribe(
                   articles => this.articles = articles,
                   error => this.errorMessage = error
                 );
+                this.mdbTable.setDataSource(this.articles);
+                this.articles = this.mdbTable.getDataSource();
+                this.previous = this.mdbTable.getDataSource();
   }
 
   // DELETE article
@@ -61,4 +75,54 @@ export class ArticlesDashboardComponent implements OnInit, AfterViewInit {
             error => this.errorMessage = error,
         )
   }
+
+  // GET uploaded file info
+  onSelectedFile(event) {
+    if (<File>event.target.files[0] != null) {
+        this.imageFile = <File>event.target.files[0];
+    } else {
+        this.imageFile = null;
+    }
+
+    // Image preview
+    const reader = new FileReader();
+    reader.onload = (event:any) => {
+        this.imageDef = event.target.result
+    };
+    reader.readAsDataURL(this.imageFile)
+  }
+
+  // ADD article
+  addArticle(heading, description, shortDescription) {
+    let img = new FormData();
+    let imageName;
+    if (this.imageFile !== null) {
+        img.append('articleImage', this.imageFile, this.imageFile.name);
+        imageName = 'http://localhost:3000/uploads/' + this.imageFile.name;
+        this.service.addArticle(heading, description, shortDescription, imageName, img)
+            .subscribe(
+                article => {
+                    this.articles.push(article);
+                    this.toastr.success('Статья добавлена');
+                    this.articleForm.reset();
+                    this.service.getArticles()
+                        .subscribe(articles => this.articles = articles);
+                },
+                error => this.errorMessage = error
+            );
+    } else {
+        this.service.addArticle(heading, description, shortDescription, imageName, img)
+            .subscribe(
+                article => {
+                    this.articles.push(article);
+                    this.toastr.success('Статья добавлена');
+                    this.articleForm.reset();
+                    this.service.getArticles()
+                        .subscribe(articles => this.articles = articles);
+                },
+                error => this.errorMessage = error
+            );
+    }
+}
+
 }
