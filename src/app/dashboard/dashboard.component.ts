@@ -17,7 +17,7 @@ export class DashboardComponent implements OnInit {
   
   linkList = [
     { link: "/dashboard/articles", name: "Статьи" },
-    { link: "/dashboard/users", name: "Пользователи"}
+    { link: "/dashboard/services", name: "Услуги" }
   ]
 
     constructor( ) {

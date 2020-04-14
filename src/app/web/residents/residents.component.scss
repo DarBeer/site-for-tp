@@ -1,0 +1,82 @@
+* {
+    color: #303030;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.how-to {
+
+    margin: 20px 0 10px 0;
+
+}
+
+.privileges {
+    padding: 10px 15px;
+    background-color: #47c25b;
+
+    h3 {
+        color: #ffffff;
+    }
+
+    span {
+        color: #ffffff;
+        font-size: 1.1em;
+    }
+
+    .content {
+        margin-top: 10px;
+
+        .item {
+            display: inline-flex;
+
+            .icon {
+                height: 100px;
+                width: 100px;
+
+                * {
+                    position: relative;
+                    top: 40%;
+                    left: 50%;
+                    color: #ffffff;
+                }
+                
+            }
+
+            .text {
+                margin-left: 1em;
+                font-weight: 500;
+            }
+        }
+    }
+    
+}
+
+.requirements {
+    margin: 20px 0px 10px 0px;
+    
+    .content {
+        display: inline-flex;
+
+        .icon {
+            width: 30px;
+        }
+    
+        span {
+            margin-left: 10px;
+        }
+    }
+    
+}
+
+.join {
+    margin: 20px 0 10px 0;
+}
+
+h3 {
+    font-weight: 500;
+    font-size: 1.7em;
+}
+
+p {
+    font-size: 1.2em;
+    text-align: justify;
+}   

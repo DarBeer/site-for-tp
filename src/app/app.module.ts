@@ -14,12 +14,14 @@ import { HeaderComponent } from './web/header/header.component';
 import { FooterComponent } from './web/footer/footer.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeDashboardComponent } from './dashboard/home-dashboard/home-dashboard.component';
-import { UsersDashboardComponent } from './dashboard/users-dashboard/users-dashboard.component';
 import { ArticlesDashboardComponent } from './dashboard/articles-dashboard/articles-dashboard.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { PageComponent } from './web/articles/page/page.component';
 import { ToastrModule } from 'ngx-toastr';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ResidentsComponent } from './web/residents/residents.component';
+import { ServicesComponent } from './web/services/services.component';
+import { ServicesDashboardComponent } from './dashboard/services-dashboard/services-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -31,10 +33,12 @@ import { ReactiveFormsModule } from '@angular/forms';
     FooterComponent,
     DashboardComponent,
     HomeDashboardComponent,
-    UsersDashboardComponent,
     ArticlesDashboardComponent,
     NotFoundComponent,
     PageComponent,
+    ResidentsComponent,
+    ServicesComponent,
+    ServicesDashboardComponent,
   ],
   imports: [
     ToastrModule.forRoot({

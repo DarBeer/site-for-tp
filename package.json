@@ -2,7 +2,7 @@
   "name": "site-for-tp",
   "version": "0.0.0",
   "scripts": {
-    "dev": "lite-server --baseDir='dist/site-for-tp'",
+    "dev": "lite-server",
     "ng": "ng",
     "start": "ng serve --port 80",
     "build": "ng build",
