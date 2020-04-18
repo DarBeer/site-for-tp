@@ -1,0 +1,17 @@
+$grean: #47c25b;
+$white: #ffffff;
+
+* {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.button {
+    background-color: $grean;
+    color: $white;
+    font-weight: bold;
+}
+
+.container {
+    margin-bottom: 20px;
+    margin-top: 2em;
+} 

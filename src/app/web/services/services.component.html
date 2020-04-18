@@ -1,1 +1,29 @@
-<p>services works!</p>
+<div class="container">
+    <div class="row">
+        <div *ngFor="let item of services" class="col-sm-12 col-lg-3">
+            <mdb-card>
+                <div class="view rgba-white-slight waves-light" mdbWavesEffect>
+                  <!-- Card img -->
+                  <mdb-card-img src="{{item.imgUrl}}" alt="Card image cap"></mdb-card-img> 
+                  <a>
+                    <div class="mask"></div>
+                  </a>
+                </div>
+                <!--Card content-->
+                <mdb-card-body>
+                  <!--Title-->
+                  <mdb-card-title>
+                    <h4>{{item.heading}}</h4>
+                  </mdb-card-title>
+              
+                  <!--Text-->
+                  <mdb-card-text> 
+                    {{item.shortDescription}}
+                  </mdb-card-text>
+              
+                  <a href="#" mdbBtn class="button" routerLink="/services/{{item._id}}" mdbWavesEffect>Читать далее</a>
+                </mdb-card-body>
+              </mdb-card>
+        </div>
+    </div>
+</div>

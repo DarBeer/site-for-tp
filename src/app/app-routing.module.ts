@@ -11,6 +11,7 @@ import { PageComponent } from './web/articles/page/page.component';
 import { ResidentsComponent } from './web/residents/residents.component';
 import { ServicesComponent } from './web/services/services.component';
 import { ServicesDashboardComponent } from './dashboard/services-dashboard/services-dashboard.component';
+import { ServicePageComponent } from './web/services/service-page/service-page.component';
 
 
 const routes: Routes = [
@@ -19,7 +20,8 @@ const routes: Routes = [
     { path: 'articles', component: ArticlesComponent },
     { path: 'articles/:id', component: PageComponent },
     { path: 'residents', component: ResidentsComponent },
-    { path: 'services', component: ServicesComponent }
+    { path: 'services', component: ServicesComponent },
+    { path: 'services/:id', component: ServicePageComponent }
   ]},
   { path: 'dashboard', component: DashboardComponent, children: [
     { path: '', component: HomeDashboardComponent },

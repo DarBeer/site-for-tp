@@ -3,10 +3,8 @@
     font-family: 'Ubuntu', sans-serif;
 }
 
-.how-to {
-
-    margin: 20px 0 10px 0;
-
+.container {
+    margin-top: 2em;
 }
 
 .privileges {
@@ -27,22 +25,10 @@
 
         .item {
             display: inline-flex;
-
-            .icon {
-                height: 100px;
-                width: 100px;
-
-                * {
-                    position: relative;
-                    top: 40%;
-                    left: 50%;
-                    color: #ffffff;
-                }
-                
-            }
+            margin-bottom: 20px;
 
             .text {
-                margin-left: 1em;
+                margin: auto 1em;
                 font-weight: 500;
             }
         }
@@ -69,6 +55,60 @@
 
 .join {
     margin: 20px 0 10px 0;
+}
+
+.circle {
+    background: #47c25b !important;
+}
+
+.stepper {
+    font-weight: 500;
+
+    color: #303030 !important;
+    
+    li a .label {
+        color: #303030 !important;
+    }
+}
+
+.files {
+    margin-top: 1em;
+    margin-bottom: 2em;
+
+    a {
+        margin-top: 1em;
+        display: inline-flex;
+
+        .icon {
+            width: 48px;
+            height: 48px;
+
+            * {
+                margin-left: 10px;
+                margin-top: 8px;
+            }
+        }
+    
+        span {
+            margin-left: 10px;
+            font-weight: 500;
+        }
+    }
+
+    a:hover, a:focus {
+        color: #47c25b !important;
+
+        .icon {
+            
+            * {
+                color: #47c25b;
+            }
+        }
+
+        span {
+            color: #47c25b;
+        }
+    }
 }
 
 h3 {
