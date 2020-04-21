@@ -28,8 +28,11 @@ export class ArticlesDashboardComponent implements OnInit, AfterViewInit {
   imageFile: File = null;
   imageDef: string ='../../../assets/img/noimage.png';
 
-  constructor(private cdRef: ChangeDetectorRef, private service: ArticleService, private toastr: ToastrService,
-    private form: FormBuilder) { this.createForm(); }
+  constructor(private cdRef: ChangeDetectorRef, 
+              private service: ArticleService, 
+              private toastr: ToastrService,
+              private form: FormBuilder) 
+    { this.createForm(); }
 
   ngOnInit() {
     this.getArticles();
@@ -98,7 +101,7 @@ export class ArticlesDashboardComponent implements OnInit, AfterViewInit {
     let imageName;
     if (this.imageFile !== null) {
         img.append('articleImage', this.imageFile, this.imageFile.name);
-        imageName = 'http://localhost:3000/uploads/' + this.imageFile.name;
+        imageName = 'http://localhost:3000/uploads/article/' + this.imageFile.name;
         this.service.addArticle(heading, description, shortDescription, imageName, img)
             .subscribe(
                 article => {

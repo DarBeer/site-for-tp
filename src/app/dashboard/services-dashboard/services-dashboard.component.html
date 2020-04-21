@@ -1,1 +1,73 @@
-<p>services-dashboard works!</p>
+
+
+<form class="row" [formGroup]="serviceForm" (submit)="addService(heading.value, editorContent, shortDescription.value)" novalidate>
+    <div class="col-md-8">
+        <div class="form-group col-md-12">
+            <label>Заголовок</label>
+            <input type="text" class="form-control" formControlName="heading" #heading />
+            <div *ngIf="serviceForm.controls['heading'].invalid && (serviceForm.controls['heading'].dirty || serviceForm.controls['heading'].touched)" class="alert alert-danger">
+                <div *ngIf="serviceForm.controls['heading'].errors.required">
+                    Необходимо заполнить заголовок!
+                </div>
+            </div>
+        </div>
+        <div class="form-group col-md-12">
+            <label>Описание</label>
+            <div [froalaEditor] [(froalaModel)]="editorContent"></div>
+        </div>
+        <div class="form-group col-md-12">
+            <label>Короткое описание</label>
+            <textarea type="text" class="form-control" formControlName="shortDescription" rows="3" #shortDescription></textarea>
+            <div *ngIf="serviceForm.controls['shortDescription'].invalid && (serviceForm.controls['shortDescription'].dirty || serviceForm.controls['shortDescription'].touched)" class="alert alert-danger">
+                <div *ngIf="serviceForm.controls['shortDescription'].errors.required">
+                    Необходимо заполнить короткое описание!
+                </div>
+            </div>
+        </div>
+        <div class="form-group col-md-12">
+            <label>Загрузка</label>
+            <input type="file" class="form-control" formControlName="urlImage" accept="image/*" (change)="onSelectedFile($event)"  name="serviceImage" #urlImage/>
+        </div>
+        <div class="form-group col-md-12">
+            <button type="submit"  [disabled]="serviceForm.pristine || serviceForm.invalid" class="btn btn-primary">Добавить</button>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="col-md-12 image-container">
+            <label>Изображение</label>
+            <div class="img-preview">
+                <img [src]="imageDef">
+            </div>
+        </div>
+    </div>
+</form>
+
+<div class="container">
+    <div class="row">
+        <div *ngFor="let item of services" class="col-3">
+            <mdb-card>
+                <div class="view rgba-white-slight waves-light" mdbWavesEffect>
+                  <!-- Card img -->
+                  <mdb-card-img src="{{item.imgUrl}}" alt="Card image cap"></mdb-card-img> 
+                  <a>
+                    <div class="mask"></div>
+                  </a>
+                </div>
+                <!--Card content-->
+                <mdb-card-body>
+                  <!--Title-->
+                  <mdb-card-title>
+                    <h4>{{item.heading}}</h4>
+                  </mdb-card-title>
+              
+                  <!--Text-->
+                  <mdb-card-text> 
+                    {{item.shortDescription}}
+                  </mdb-card-text>
+              
+                  <a mdbBtn class="button" (click)="delService(item._id)" mdbWavesEffect>Удалить</a>
+                </mdb-card-body>
+              </mdb-card>
+        </div>
+    </div>
+</div>

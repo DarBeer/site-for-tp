@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from "rxjs";
-import { Services } from '../../data/service';
+import { Service } from '../../data/service';
 import { catchError, map } from 'rxjs/operators';
 
 @Injectable({
@@ -12,39 +12,39 @@ export class ServicesService {
     constructor(private http: HttpClient) { }
 
     // GET Services
-    getServices(): Observable<Services[]> {
+    getServices(): Observable<Service[]> {
         const uri = 'http://localhost:3000/data/services';
         return this
             .http
-            .get<Services[]>(uri)
+            .get<Service[]>(uri)
             .pipe(map(res => {
               return res;
             }));
     }
 
     // GET Services
-    getService(id:any): Observable<Services> {
+    getService(id:any): Observable<Service> {
         const uri = 'http://localhost:3000/data/services/get-one/' + id;
         return this
             .http
-            .get<Services>(uri)
+            .get<Service>(uri)
             .pipe(map(res => {
               return res;
             }));
     }
 
-    getServicesLast(): Observable<Services[]> {
+    getServicesLast(): Observable<Service[]> {
         const uri = 'http://localhost:3000/data/services/last';
         return this
             .http
-            .get<Services[]>(uri)
+            .get<Service[]>(uri)
             .pipe(map(res => {
               return res;
             }));
     }
 
     // ADD Services
-    addService(heading, description, shortDescription, imageName, img): Observable<Services> {
+    addService(heading, description, shortDescription, imageName, img): Observable<Service> {
         const uri = 'http://localhost:3000/data/services/add';
         const uri_img = 'http://localhost:3000/data/services/upload';
         const headers = new HttpHeaders();
@@ -52,15 +52,14 @@ export class ServicesService {
             heading: heading,
             description: description,
             shortDescription: shortDescription,
-            urlImage: imageName,
-            date: Date.now()
+            imgUrl: imageName
         };
         this.http
             .post(uri_img, img)
             .subscribe(res =>
                 console.log(res));
         return this.http
-            .post<Services>(uri, obj,{headers:headers})
+            .post<Service>(uri, obj,{headers:headers})
             .pipe(map(res => {
               return res;
             }))

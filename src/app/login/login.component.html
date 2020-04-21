@@ -1,0 +1,18 @@
+<div class="container">
+    <!-- Default form login -->
+    <form [formGroup]="authForm" class="text-center border border-light p-5">
+
+        <p class="h4 mb-4">Sign in</p>
+    
+        <!-- Email -->
+        <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail" formControlName="login">
+    
+        <!-- Password -->
+        <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password" formControlName="pass">
+    
+        <!-- Sign in button -->
+        <button mdbBtn color="info" block="true" class="my-4" type="submit" (click)="LogIn($event, authForm.value.login, authForm.value.pass)" routerLink="/dashboard">Sign in</button>
+    
+  </form>
+  <!-- Default form login -->
+</div>

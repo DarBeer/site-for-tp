@@ -9,7 +9,26 @@ import { catchError, map } from 'rxjs/operators';
 })
 export class UserService {
 
-  constructor(private http: HttpClient) { }
+  private  isUserLoggedIn;
+  private username = '1';
+  private password = '1';
+
+  constructor() {
+    this.isUserLoggedIn = false;
+  }
+
+  setUserLoggedIn(login, pass) {
+      if (login === this.username && pass === this.password) {
+          this.isUserLoggedIn = true;
+          return this.getUserLoggedIn();
+      } else {
+          return this.getUserLoggedIn();
+      }
+  }
+
+  getUserLoggedIn() {
+      return this.isUserLoggedIn;
+  }
 
     
 }

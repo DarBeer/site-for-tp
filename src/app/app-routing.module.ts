@@ -12,6 +12,8 @@ import { ResidentsComponent } from './web/residents/residents.component';
 import { ServicesComponent } from './web/services/services.component';
 import { ServicesDashboardComponent } from './dashboard/services-dashboard/services-dashboard.component';
 import { ServicePageComponent } from './web/services/service-page/service-page.component';
+import { AuthguardGuard } from './authguard.guard';
+import { LoginComponent } from './login/login.component';
 
 
 const routes: Routes = [
@@ -23,13 +25,14 @@ const routes: Routes = [
     { path: 'services', component: ServicesComponent },
     { path: 'services/:id', component: ServicePageComponent }
   ]},
-  { path: 'dashboard', component: DashboardComponent, children: [
-    { path: '', component: HomeDashboardComponent },
+  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthguardGuard], children: [
+    { path: '', redirectTo: 'articles', pathMatch: 'full' },
     { path: 'articles', component: ArticlesDashboardComponent },
     { path: 'services', component: ServicesDashboardComponent }
   ]},
+  { path: 'login', component: LoginComponent },
   { path: 'not-found', component: NotFoundComponent },
-  //{ path: '**', redirectTo: 'not-found', pathMatch: 'full' }
+  { path: '**', redirectTo: 'not-found', pathMatch: 'full' }
 ];
 
 @NgModule({

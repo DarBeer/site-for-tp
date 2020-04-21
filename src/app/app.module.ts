@@ -23,6 +23,11 @@ import { ResidentsComponent } from './web/residents/residents.component';
 import { ServicesComponent } from './web/services/services.component';
 import { ServicesDashboardComponent } from './dashboard/services-dashboard/services-dashboard.component';
 import { ServicePageComponent } from './web/services/service-page/service-page.component';
+import { LoginComponent } from './login/login.component';
+import { UserService } from './shared/service/user.service';
+import { DataService } from './shared/service/data.service';
+import { ArticleService } from './shared/service/atricle.service';
+import { AuthguardGuard } from './authguard.guard';
 
 @NgModule({
   declarations: [
@@ -41,6 +46,7 @@ import { ServicePageComponent } from './web/services/service-page/service-page.c
     ServicesComponent,
     ServicesDashboardComponent,
     ServicePageComponent,
+    LoginComponent,
   ],
   imports: [
     ToastrModule.forRoot({
@@ -54,7 +60,11 @@ import { ServicePageComponent } from './web/services/service-page/service-page.c
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    AuthguardGuard, 
+    UserService,
+    ArticleService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
