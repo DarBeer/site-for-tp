@@ -1,11 +1,106 @@
 <!-- Footer -->
-<footer class="page-footer font-small grean">
+<footer class="page-footer font-small grean pt-4">
 
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© {{date.getFullYear()}} Copyright:
-      <a href="https://polessu.by/"> Polessu.by</a>
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-6 mt-md-0 mt-3">
+
+        <!-- Content -->
+        <h5 class="text-uppercase">Контакты</h5>
+        <span>
+          ул. Днепровской флотилии , 23 225710, г. Пинск, Брестской обл.
+        </span><br>
+        <span>
+          Тел. (0165) 31-31-60 моб. (29)532-08-05
+        </span><br>
+        <span>email: <a href = "mailto: tppoless@gmail.com">tppoless@gmail.com</a></span>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none pb-3">
+
+      <!-- Grid column -->
+      <div class="col-md-3 mb-md-0 mb-3">
+
+          <!-- Links -->
+          <h5 class="text-uppercase"></h5>
+
+          <ul class="list-unstyled">
+            <li>
+              Директор – Козырь Алексей Викторович +37529532085 <br>email: <a href = "mailto: kozyr.a@polessu.by">kozyr.a@polessu.by</a>
+            </li>
+            <li>
+              Заместитель директора по науке – Штепа Владимир Николаевич +375444657314 <br>email: <a href = "mailto: shtepa.v@polessu.by">shtepa.v@polessu.by</a>
+            </li>
+          </ul>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 mb-md-0 mb-3">
+
+          <!-- Links -->
+          <h5 class="text-uppercase"></h5>
+
+          <span>
+            IBAN BY75PJCB30125215211000000933<br> 
+            ОАО «Приорбанк» BIC PJCBBY2X<br>
+            УНП 29098336, ОКПО 298654591000<br>
+            Субъект инновационной инфраструктуры научно-технологический парк «Полесье»<br> 
+            ООО «Технопарк «Полесье»<br>
+          </span>
+
+        </div>
+        <!-- Grid column -->
+
     </div>
-    <!-- Copyright -->
-  
-  </footer>
-  <!-- Footer -->
+    <!-- Grid row -->
+
+    <div class="row">
+      <div class="col">
+        <h5 class="text-uppercase">Наши партнеры</h5>
+      </div>
+    </div>
+
+    <!-- Grid row -->
+
+    <div class="row">
+      
+      <!--Grid column-->
+      <div class="col-lg-12 col-md-12 mb-4">
+        <ul class="list-group list-group-horizontal-sm">
+          <li *ngFor="let item of investors" class="list-group-item center">
+            <!--Image-->
+            <div class="view overlay z-depth-1-half">
+              <img src="{{item.urlImage}}" class="img-fluid" alt="{{item.name}}">
+              <a href="{{item.urlToInv}}" target="_blank">
+                <div class="mask rgba-white-light" mdbWavesEffect></div>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!--Grid column-->
+
+    </div>
+
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© {{date.getFullYear()}} Copyright:
+    <a href="https://polessu.by/"> Polessu.by</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->

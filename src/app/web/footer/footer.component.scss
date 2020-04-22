@@ -3,3 +3,21 @@ $grean: #47c25b;
 .grean {
     background-color: $grean;
 }
+
+.center {
+    margin: 0 auto;
+    width: 200px;
+}
+
+.list-group-item {
+    background-color: #47c25b;
+    border: none;
+}
+
+footer {
+    min-height: 398px;
+}
+
+.container {
+    min-height: 321px;
+}
