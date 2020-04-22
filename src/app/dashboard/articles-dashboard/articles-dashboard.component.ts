@@ -2,7 +2,6 @@ import { MdbTablePaginationComponent, MdbTableDirective } from 'angular-bootstra
 
 import { Component, OnInit, ViewChild, HostListener, AfterViewInit, ChangeDetectorRef } from '@angular/core';
 import { FormGroup,  FormBuilder,  Validators } from "@angular/forms";
-
 import { ToastrService } from 'ngx-toastr';
 
 import { Article } from 'src/app/data/article';
@@ -15,13 +14,9 @@ import { ArticleService } from 'src/app/shared/service/atricle.service';
 })
 export class ArticlesDashboardComponent implements OnInit, AfterViewInit {
 
-  @ViewChild(MdbTablePaginationComponent, { static: true }) mdbTablePagination: MdbTablePaginationComponent;
-  @ViewChild(MdbTableDirective, { static: true }) mdbTable: MdbTableDirective
   private errorMessage: string;
   articles: Article[];
   article: Article;
-  previous: any = [];
-  headElements = ['Изображение', 'ID', 'Название', 'Содержание', 'Дата', ' '];
 
   articleForm: FormGroup;
   editorContent: string;
@@ -39,10 +34,6 @@ export class ArticlesDashboardComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.mdbTablePagination.setMaxVisibleItemsNumberTo(5);
-
-    this.mdbTablePagination.calculateFirstItemIndex();
-    this.mdbTablePagination.calculateLastItemIndex();
     this.cdRef.detectChanges();
   }
 
@@ -61,9 +52,6 @@ export class ArticlesDashboardComponent implements OnInit, AfterViewInit {
                   articles => this.articles = articles,
                   error => this.errorMessage = error
                 );
-                this.mdbTable.setDataSource(this.articles);
-                this.articles = this.mdbTable.getDataSource();
-                this.previous = this.mdbTable.getDataSource();
   }
 
   // DELETE article

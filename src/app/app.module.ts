@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
+import { EditorModule } from '@tinymce/tinymce-angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -28,6 +29,9 @@ import { UserService } from './shared/service/user.service';
 import { DataService } from './shared/service/data.service';
 import { ArticleService } from './shared/service/atricle.service';
 import { AuthguardGuard } from './authguard.guard';
+import { KlasterComponent } from './web/klaster/klaster.component';
+import { KlasterDashboardComponent } from './dashboard/klaster-dashboard/klaster-dashboard.component';
+import { InvestorsDashboardComponent } from './dashboard/investors-dashboard/investors-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -47,11 +51,15 @@ import { AuthguardGuard } from './authguard.guard';
     ServicesDashboardComponent,
     ServicePageComponent,
     LoginComponent,
+    KlasterComponent,
+    KlasterDashboardComponent,
+    InvestorsDashboardComponent,
   ],
   imports: [
     ToastrModule.forRoot({
       positionClass: 'toast-bottom-right'
     }),
+    EditorModule,
     FroalaEditorModule.forRoot(), 
     FroalaViewModule.forRoot(),
     MDBBootstrapModule.forRoot(),

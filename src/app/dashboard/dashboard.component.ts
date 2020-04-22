@@ -11,13 +11,15 @@ export class DashboardComponent implements OnInit {
   title = 'Технопарк «Полесье»';
   dashboard = 'Главная панель';
 
-  home = "Статистика"
+  home = ""
 
   logaut = 'Выйти'
   
   linkList = [
-    { link: "/dashboard/articles", name: "Статьи" },
-    { link: "/dashboard/services", name: "Услуги" }
+    { link: '/dashboard/articles',        name: 'Статьи'        },
+    { link: '/dashboard/services',        name: 'Услуги'        },
+    { link: '/dashboard/investors',       name: 'Инвесторы'     },
+    { link: '/dashboard/klaster',         name: 'Кластер'       }
   ]
 
     constructor( ) {

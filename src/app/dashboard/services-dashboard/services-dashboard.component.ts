@@ -1,8 +1,6 @@
 import { Component, OnInit, ViewChild, HostListener, AfterViewInit, ChangeDetectorRef } from '@angular/core';
 import { FormGroup,  FormBuilder,  Validators } from "@angular/forms";
 
-import { MdbTablePaginationComponent, MdbTableDirective } from 'angular-bootstrap-md';
-
 import { ToastrService } from 'ngx-toastr';
 
 import { Service } from 'src/app/data/service';
@@ -17,7 +15,6 @@ export class ServicesDashboardComponent implements OnInit {
   
   services: Service[];
   service: Service;
-
 
   serviceForm: FormGroup;
   editorContent: string;
@@ -105,7 +102,7 @@ export class ServicesDashboardComponent implements OnInit {
                     this.toastr.success('Статья добавлена');
                     this.serviceForm.reset();
                     this.serviceForService.getServices()
-                        .subscribe(services => this.service = service);
+                        .subscribe(services => this.services = services);
                 },
                 error => console.dir(error),
             );

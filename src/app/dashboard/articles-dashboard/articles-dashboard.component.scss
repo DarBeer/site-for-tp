@@ -1,3 +1,6 @@
+$grean: #47c25b;
+$white: #ffffff;
+
 .table-img {
     width: 20vw;
 }
@@ -53,3 +56,9 @@ thead tr {
     overflow: scroll;
     max-height: 150px;
   }
+
+  .button {
+    background-color: $grean;
+    color: $white;
+    font-weight: bold;
+}

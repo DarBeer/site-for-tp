@@ -11,9 +11,10 @@ export class HeaderComponent implements OnInit {
   title = 'ПТП';
 
   linkList = [
-    { name: 'Новости', link: '/articles'},
-    { name: 'Резидентам', link: '/residents' },
-    { name: 'Услуги', link: '/services' }
+    { name: 'Новости',            link: '/articles'     },
+    { name: 'Резидентам',         link: '/residents'    },
+    { name: 'Услуги',             link: '/services'     },
+    { name: 'Кластер',            link: '/klaster'      }
   ]
 
   constructor() { }
