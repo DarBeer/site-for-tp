@@ -13,7 +13,7 @@ export class InvestorsService {
 
   // GET Investors
   getInvestor(): Observable<Investor[]> {
-    const uri = 'http://localhost:3001/data/investors';
+    const uri = 'http://localhost:3000/data/investors';
     return this
         .http
         .get<Investor[]>(uri)
@@ -24,8 +24,8 @@ export class InvestorsService {
 
 // ADD Investors
 addInvestor(name, urlToInv, imageName, img): Observable<Investor> {
-    const uri = 'http://localhost:3001/data/investors/add';
-    const uri_img = 'http://localhost:3001/data/investors/upload';
+    const uri = 'http://localhost:3000/data/investors/add';
+    const uri_img = 'http://localhost:3000/data/investors/upload';
     const headers = new HttpHeaders();
     const obj = {
         name: name,
@@ -45,7 +45,7 @@ addInvestor(name, urlToInv, imageName, img): Observable<Investor> {
 
 // DELETE Investors
 delInvestor(id:any) {
-    const uri = 'http://localhost:3001/data/investors/delete/' + id;
+    const uri = 'http://localhost:3000/data/investors/delete/' + id;
     return this
         .http
         .get(uri)
