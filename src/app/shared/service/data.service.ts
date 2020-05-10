@@ -11,7 +11,7 @@ export class DataService {
 
     // GET images
     getImages(): Observable<Image[]> {
-        const uri = 'http://localhost:3000/data/images';
+        const uri = 'https://shielded-oasis-48709.herokuapp.com/data/images';
         return this
             .http
             .get<Image[]>(uri)
@@ -22,8 +22,8 @@ export class DataService {
 
     // ADD image
     addImage(heading, description, imageName, img): Observable<Image> {
-        const uri = 'http://localhost:3000/data/images/add';
-        const uri_img = 'http://localhost:3000/data/images/upload';
+        const uri = 'https://shielded-oasis-48709.herokuapp.com/data/images/add';
+        const uri_img = 'https://shielded-oasis-48709.herokuapp.com/data/images/upload';
         const headers = new HttpHeaders();
         const obj = {
             heading: heading,
@@ -48,7 +48,7 @@ export class DataService {
 
     // DELETE image
     delImage(id) {
-        const uri = 'http://localhost:3000/data/images/delete/' + id;
+        const uri = 'https://shielded-oasis-48709.herokuapp.com/data/images/delete/' + id;
         return this
             .http
             .get(uri)
