@@ -1595,7 +1595,7 @@ class ArticleService {
     }
     // GET articles
     getArticles() {
-        const uri = 'http://localhost:3000/data/articles';
+        const uri = 'https://shielded-oasis-48709.herokuapp.com/data/articles';
         return this
             .http
             .get(uri)
@@ -1605,7 +1605,7 @@ class ArticleService {
     }
     // GET article
     getArticle(id) {
-        const uri = 'http://localhost:3000/data/articles/get-one/' + id;
+        const uri = 'https://shielded-oasis-48709.herokuapp.com/data/articles/get-one/' + id;
         return this
             .http
             .get(uri)
@@ -1614,7 +1614,7 @@ class ArticleService {
         }));
     }
     getArticlesLast() {
-        const uri = 'http://localhost:3000/data/articles/last';
+        const uri = 'https://shielded-oasis-48709.herokuapp.com/data/articles/last';
         return this
             .http
             .get(uri)
@@ -1624,8 +1624,8 @@ class ArticleService {
     }
     // ADD article
     addArticle(heading, description, shortDescription, imageName, img) {
-        const uri = 'http://localhost:3000/data/articles/add';
-        const uri_img = 'http://localhost:3000/data/articles/upload';
+        const uri = 'https://shielded-oasis-48709.herokuapp.com/data/articles/add';
+        const uri_img = 'https://shielded-oasis-48709.herokuapp.com/data/articles/upload';
         const headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
         const obj = {
             heading: heading,
@@ -1645,7 +1645,7 @@ class ArticleService {
     }
     // DELETE article
     delArticle(id) {
-        const uri = 'http://localhost:3000/data/articles/delete/' + id;
+        const uri = 'https://shielded-oasis-48709.herokuapp.com/data/articles/delete/' + id;
         return this
             .http
             .get(uri)
@@ -1690,7 +1690,7 @@ class InvestorsService {
     }
     // GET Investors
     getInvestor() {
-        const uri = 'http://localhost:3000/data/investors';
+        const uri = 'https://shielded-oasis-48709.herokuapp.com/data/investors';
         return this
             .http
             .get(uri)
@@ -1700,8 +1700,8 @@ class InvestorsService {
     }
     // ADD Investors
     addInvestor(name, urlToInv, imageName, img) {
-        const uri = 'http://localhost:3000/data/investors/add';
-        const uri_img = 'http://localhost:3000/data/investors/upload';
+        const uri = 'https://shielded-oasis-48709.herokuapp.com/data/investors/add';
+        const uri_img = 'https://shielded-oasis-48709.herokuapp.com/data/investors/upload';
         const headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
         const obj = {
             name: name,
@@ -1719,7 +1719,7 @@ class InvestorsService {
     }
     // DELETE Investors
     delInvestor(id) {
-        const uri = 'http://localhost:3000/data/investors/delete/' + id;
+        const uri = 'https://shielded-oasis-48709.herokuapp.com/data/investors/delete/' + id;
         return this
             .http
             .get(uri)
@@ -1764,7 +1764,7 @@ class KlasterService {
     }
     // GET Klaster
     getKlaster() {
-        const uri = 'http://localhost:3000/data/klaster';
+        const uri = 'https://shielded-oasis-48709.herokuapp.com/data/klaster';
         return this
             .http
             .get(uri)
@@ -1774,7 +1774,7 @@ class KlasterService {
     }
     // ADD Klaster
     addKlaster(name, description) {
-        const uri = 'http://localhost:3000/data/klaster/add';
+        const uri = 'https://shielded-oasis-48709.herokuapp.com/data/klaster/add';
         const headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
         const obj = {
             name: name,
@@ -1789,7 +1789,7 @@ class KlasterService {
     }
     // DELETE Klaster
     delKlaster(id) {
-        const uri = 'http://localhost:3000/data/klaster/delete/' + id;
+        const uri = 'https://shielded-oasis-48709.herokuapp.com/data/klaster/delete/' + id;
         return this
             .http
             .get(uri)
@@ -1834,7 +1834,7 @@ class ServicesService {
     }
     // GET Services
     getServices() {
-        const uri = 'http://localhost:3000/data/services';
+        const uri = 'https://shielded-oasis-48709.herokuapp.com/data/services';
         return this
             .http
             .get(uri)
@@ -1844,7 +1844,7 @@ class ServicesService {
     }
     // GET Services
     getService(id) {
-        const uri = 'http://localhost:3000/data/services/get-one/' + id;
+        const uri = 'https://shielded-oasis-48709.herokuapp.com/data/services/get-one/' + id;
         return this
             .http
             .get(uri)
@@ -1853,7 +1853,7 @@ class ServicesService {
         }));
     }
     getServicesLast() {
-        const uri = 'http://localhost:3000/data/services/last';
+        const uri = 'https://shielded-oasis-48709.herokuapp.com/data/services/last';
         return this
             .http
             .get(uri)
@@ -1863,8 +1863,8 @@ class ServicesService {
     }
     // ADD Services
     addService(heading, description, shortDescription, imageName, img) {
-        const uri = 'http://localhost:3000/data/services/add';
-        const uri_img = 'http://localhost:3000/data/services/upload';
+        const uri = 'https://shielded-oasis-48709.herokuapp.com/data/services/add';
+        const uri_img = 'https://shielded-oasis-48709.herokuapp.com/data/services/upload';
         const headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
         const obj = {
             heading: heading,
@@ -1883,7 +1883,7 @@ class ServicesService {
     }
     // DELETE Services
     delService(id) {
-        const uri = 'http://localhost:3000/data/services/delete/' + id;
+        const uri = 'https://shielded-oasis-48709.herokuapp.com/data/services/delete/' + id;
         return this
             .http
             .get(uri)

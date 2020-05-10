@@ -3243,7 +3243,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(ArticleService, [{
         key: "getArticles",
         value: function getArticles() {
-          var uri = 'http://localhost:3000/data/articles';
+          var uri = 'https://shielded-oasis-48709.herokuapp.com/data/articles';
           return this.http.get(uri).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) {
             return res;
           }));
@@ -3252,7 +3252,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "getArticle",
         value: function getArticle(id) {
-          var uri = 'http://localhost:3000/data/articles/get-one/' + id;
+          var uri = 'https://shielded-oasis-48709.herokuapp.com/data/articles/get-one/' + id;
           return this.http.get(uri).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) {
             return res;
           }));
@@ -3260,7 +3260,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "getArticlesLast",
         value: function getArticlesLast() {
-          var uri = 'http://localhost:3000/data/articles/last';
+          var uri = 'https://shielded-oasis-48709.herokuapp.com/data/articles/last';
           return this.http.get(uri).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) {
             return res;
           }));
@@ -3269,8 +3269,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "addArticle",
         value: function addArticle(heading, description, shortDescription, imageName, img) {
-          var uri = 'http://localhost:3000/data/articles/add';
-          var uri_img = 'http://localhost:3000/data/articles/upload';
+          var uri = 'https://shielded-oasis-48709.herokuapp.com/data/articles/add';
+          var uri_img = 'https://shielded-oasis-48709.herokuapp.com/data/articles/upload';
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
           var obj = {
             heading: heading,
@@ -3292,7 +3292,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "delArticle",
         value: function delArticle(id) {
-          var uri = 'http://localhost:3000/data/articles/delete/' + id;
+          var uri = 'https://shielded-oasis-48709.herokuapp.com/data/articles/delete/' + id;
           return this.http.get(uri).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) {
             return res;
           }));
@@ -3380,7 +3380,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(InvestorsService, [{
         key: "getInvestor",
         value: function getInvestor() {
-          var uri = 'http://localhost:3000/data/investors';
+          var uri = 'https://shielded-oasis-48709.herokuapp.com/data/investors';
           return this.http.get(uri).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) {
             return res;
           }));
@@ -3389,8 +3389,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "addInvestor",
         value: function addInvestor(name, urlToInv, imageName, img) {
-          var uri = 'http://localhost:3000/data/investors/add';
-          var uri_img = 'http://localhost:3000/data/investors/upload';
+          var uri = 'https://shielded-oasis-48709.herokuapp.com/data/investors/add';
+          var uri_img = 'https://shielded-oasis-48709.herokuapp.com/data/investors/upload';
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
           var obj = {
             name: name,
@@ -3410,7 +3410,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "delInvestor",
         value: function delInvestor(id) {
-          var uri = 'http://localhost:3000/data/investors/delete/' + id;
+          var uri = 'https://shielded-oasis-48709.herokuapp.com/data/investors/delete/' + id;
           return this.http.get(uri).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) {
             return res;
           }));
@@ -3498,7 +3498,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(KlasterService, [{
         key: "getKlaster",
         value: function getKlaster() {
-          var uri = 'http://localhost:3000/data/klaster';
+          var uri = 'https://shielded-oasis-48709.herokuapp.com/data/klaster';
           return this.http.get(uri).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) {
             return res;
           }));
@@ -3507,7 +3507,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "addKlaster",
         value: function addKlaster(name, description) {
-          var uri = 'http://localhost:3000/data/klaster/add';
+          var uri = 'https://shielded-oasis-48709.herokuapp.com/data/klaster/add';
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
           var obj = {
             name: name,
@@ -3524,7 +3524,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "delKlaster",
         value: function delKlaster(id) {
-          var uri = 'http://localhost:3000/data/klaster/delete/' + id;
+          var uri = 'https://shielded-oasis-48709.herokuapp.com/data/klaster/delete/' + id;
           return this.http.get(uri).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) {
             return res;
           }));
@@ -3612,7 +3612,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(ServicesService, [{
         key: "getServices",
         value: function getServices() {
-          var uri = 'http://localhost:3000/data/services';
+          var uri = 'https://shielded-oasis-48709.herokuapp.com/data/services';
           return this.http.get(uri).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) {
             return res;
           }));
@@ -3621,7 +3621,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "getService",
         value: function getService(id) {
-          var uri = 'http://localhost:3000/data/services/get-one/' + id;
+          var uri = 'https://shielded-oasis-48709.herokuapp.com/data/services/get-one/' + id;
           return this.http.get(uri).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) {
             return res;
           }));
@@ -3629,7 +3629,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "getServicesLast",
         value: function getServicesLast() {
-          var uri = 'http://localhost:3000/data/services/last';
+          var uri = 'https://shielded-oasis-48709.herokuapp.com/data/services/last';
           return this.http.get(uri).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) {
             return res;
           }));
@@ -3638,8 +3638,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "addService",
         value: function addService(heading, description, shortDescription, imageName, img) {
-          var uri = 'http://localhost:3000/data/services/add';
-          var uri_img = 'http://localhost:3000/data/services/upload';
+          var uri = 'https://shielded-oasis-48709.herokuapp.com/data/services/add';
+          var uri_img = 'https://shielded-oasis-48709.herokuapp.com/data/services/upload';
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
           var obj = {
             heading: heading,
@@ -3660,7 +3660,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "delService",
         value: function delService(id) {
-          var uri = 'http://localhost:3000/data/services/delete/' + id;
+          var uri = 'https://shielded-oasis-48709.herokuapp.com/data/services/delete/' + id;
           return this.http.get(uri).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) {
             return res;
           }));
