@@ -13,7 +13,7 @@ export class ServicesService {
 
     // GET Services
     getServices(): Observable<Service[]> {
-        const uri = 'http://localhost:3000/data/services';
+        const uri = 'http://localhost:3001/data/services';
         return this
             .http
             .get<Service[]>(uri)
@@ -24,7 +24,7 @@ export class ServicesService {
 
     // GET Services
     getService(id:any): Observable<Service> {
-        const uri = 'http://localhost:3000/data/services/get-one/' + id;
+        const uri = 'http://localhost:3001/data/services/get-one/' + id;
         return this
             .http
             .get<Service>(uri)
@@ -34,7 +34,7 @@ export class ServicesService {
     }
 
     getServicesLast(): Observable<Service[]> {
-        const uri = 'http://localhost:3000/data/services/last';
+        const uri = 'http://localhost:3001/data/services/last';
         return this
             .http
             .get<Service[]>(uri)
@@ -45,8 +45,8 @@ export class ServicesService {
 
     // ADD Services
     addService(heading, description, shortDescription, imageName, img): Observable<Service> {
-        const uri = 'http://localhost:3000/data/services/add';
-        const uri_img = 'http://localhost:3000/data/services/upload';
+        const uri = 'http://localhost:3001/data/services/add';
+        const uri_img = 'http://localhost:3001/data/services/upload';
         const headers = new HttpHeaders();
         const obj = {
             heading: heading,
@@ -67,7 +67,7 @@ export class ServicesService {
 
     // DELETE Services
     delService(id:any) {
-        const uri = 'http://localhost:3000/data/services/delete/' + id;
+        const uri = 'http://localhost:3001/data/services/delete/' + id;
         return this
             .http
             .get(uri)
