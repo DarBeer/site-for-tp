@@ -82,7 +82,7 @@ export class ServicesDashboardComponent implements OnInit {
     let imageName;
     if (this.imageFile !== null) {
         img.append('serviceImage', this.imageFile, this.imageFile.name);
-        imageName = 'http://localhost:3000/uploads/service/' + this.imageFile.name;
+        imageName = 'https://shielded-oasis-48709.herokuapp.com/uploads/service/' + this.imageFile.name;
         this.serviceForService.addService(heading, description, shortDescription, imageName, img)
             .subscribe(
                 service => {

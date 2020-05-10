@@ -82,7 +82,7 @@ export class InvestorsDashboardComponent implements OnInit {
 
     if (this.imageFile !== null) {
       img.append('investorImage', this.imageFile, this.imageFile.name);
-      imageName = 'http://localhost:3000/uploads/investors/' + this.imageFile.name;
+      imageName = 'https://shielded-oasis-48709.herokuapp.com/uploads/investors/' + this.imageFile.name;
 
       this.service.addInvestor(name, urlToInv, imageName, img)
           .subscribe(
