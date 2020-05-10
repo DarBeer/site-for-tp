@@ -1919,8 +1919,8 @@ __webpack_require__.r(__webpack_exports__);
 
 class UserService {
     constructor() {
-        this.username = '1';
-        this.password = '1';
+        this.username = 'root@polessu.by';
+        this.password = 'tehnoparkouR';
         this.isUserLoggedIn = false;
     }
     setUserLoggedIn(login, pass) {

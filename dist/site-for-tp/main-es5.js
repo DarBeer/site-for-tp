@@ -3729,8 +3729,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       function UserService() {
         _classCallCheck(this, UserService);
 
-        this.username = '1';
-        this.password = '1';
+        this.username = 'root@polessu.by';
+        this.password = 'tehnoparkouR';
         this.isUserLoggedIn = false;
       }
 

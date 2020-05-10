@@ -10,8 +10,8 @@ import { catchError, map } from 'rxjs/operators';
 export class UserService {
 
   private  isUserLoggedIn;
-  private username = '1';
-  private password = '1';
+  private username = 'root@polessu.by';
+  private password = 'tehnoparkouR';
 
   constructor() {
     this.isUserLoggedIn = false;
