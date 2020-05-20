@@ -3,17 +3,20 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from "rxjs";
 import { Service } from '../../data/service';
 import { catchError, map } from 'rxjs/operators';
+import { Path } from './path';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ServicesService {
 
+  path = Path.path;
+
     constructor(private http: HttpClient) { }
 
     // GET Services
     getServices(): Observable<Service[]> {
-        const uri = 'https://shielded-oasis-48709.herokuapp.com/data/services';
+        const uri = this.path + '/data/services';
         return this
             .http
             .get<Service[]>(uri)
@@ -24,7 +27,7 @@ export class ServicesService {
 
     // GET Services
     getService(id:any): Observable<Service> {
-        const uri = 'https://shielded-oasis-48709.herokuapp.com/data/services/get-one/' + id;
+        const uri = this.path + '/data/services/get-one/' + id;
         return this
             .http
             .get<Service>(uri)
@@ -34,7 +37,7 @@ export class ServicesService {
     }
 
     getServicesLast(): Observable<Service[]> {
-        const uri = 'https://shielded-oasis-48709.herokuapp.com/data/services/last';
+        const uri = this.path + '/data/services/last';
         return this
             .http
             .get<Service[]>(uri)
@@ -45,8 +48,8 @@ export class ServicesService {
 
     // ADD Services
     addService(heading, description, shortDescription, imageName, img): Observable<Service> {
-        const uri = 'https://shielded-oasis-48709.herokuapp.com/data/services/add';
-        const uri_img = 'https://shielded-oasis-48709.herokuapp.com/data/services/upload';
+        const uri = this.path + '/data/services/add';
+        const uri_img = this.path + '/data/services/upload';
         const headers = new HttpHeaders();
         const obj = {
             heading: heading,
@@ -67,7 +70,7 @@ export class ServicesService {
 
     // DELETE Services
     delService(id:any) {
-        const uri = 'https://shielded-oasis-48709.herokuapp.com/data/services/delete/' + id;
+        const uri = this.path + '/data/services/delete/' + id;
         return this
             .http
             .get(uri)

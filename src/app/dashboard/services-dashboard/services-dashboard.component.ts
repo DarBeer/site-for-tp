@@ -5,6 +5,7 @@ import { ToastrService } from 'ngx-toastr';
 
 import { Service } from 'src/app/data/service';
 import { ServicesService } from 'src/app/shared/service/services.service';
+import { Path } from 'src/app/shared/service/path';
 
 @Component({
   selector: 'app-services-dashboard',
@@ -13,6 +14,8 @@ import { ServicesService } from 'src/app/shared/service/services.service';
 })
 export class ServicesDashboardComponent implements OnInit {
   
+  path = Path.path;
+
   services: Service[];
   service: Service;
 
@@ -82,7 +85,7 @@ export class ServicesDashboardComponent implements OnInit {
     let imageName;
     if (this.imageFile !== null) {
         img.append('serviceImage', this.imageFile, this.imageFile.name);
-        imageName = 'https://shielded-oasis-48709.herokuapp.com/uploads/service/' + this.imageFile.name;
+        imageName = this.path + '/uploads/service/' + this.imageFile.name;
         this.serviceForService.addService(heading, description, shortDescription, imageName, img)
             .subscribe(
                 service => {

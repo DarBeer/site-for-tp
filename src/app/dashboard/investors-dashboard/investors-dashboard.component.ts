@@ -6,12 +6,16 @@ import { ToastrService } from 'ngx-toastr';
 import { Investor } from 'src/app/data/investor';
 import { InvestorsService } from 'src/app/shared/service/investors.service';
 
+import { Path } from 'src/app/shared/service/path';
+
 @Component({
   selector: 'app-investors-dashboard',
   templateUrl: './investors-dashboard.component.html',
   styleUrls: ['./investors-dashboard.component.scss']
 })
 export class InvestorsDashboardComponent implements OnInit {
+
+  path = Path.path;
 
   headElements = ['Изображение', 'ID', 'Название', 'Ссылка на инвестора', 'Редактировать'];
 
@@ -82,7 +86,7 @@ export class InvestorsDashboardComponent implements OnInit {
 
     if (this.imageFile !== null) {
       img.append('investorImage', this.imageFile, this.imageFile.name);
-      imageName = 'https://shielded-oasis-48709.herokuapp.com/uploads/investors/' + this.imageFile.name;
+      imageName = this.path + '/uploads/investors/' + this.imageFile.name;
 
       this.service.addInvestor(name, urlToInv, imageName, img)
           .subscribe(

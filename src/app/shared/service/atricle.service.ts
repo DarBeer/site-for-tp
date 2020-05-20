@@ -3,17 +3,20 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from "rxjs";
 import { Article } from '../../data/article';
 import { catchError, map } from 'rxjs/operators';
+import { Path } from './path';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ArticleService {
 
+  path = Path.path;
+
     constructor(private http: HttpClient) { }
 
     // GET articles
     getArticles(): Observable<Article[]> {
-        const uri = 'https://shielded-oasis-48709.herokuapp.com/data/articles';
+        const uri = this.path + '/data/articles';
         return this
             .http
             .get<Article[]>(uri)
@@ -24,7 +27,7 @@ export class ArticleService {
 
     // GET article
     getArticle(id:any): Observable<Article> {
-        const uri = 'https://shielded-oasis-48709.herokuapp.com/data/articles/get-one/' + id;
+        const uri = this.path + '/data/articles/get-one/' + id;
         return this
             .http
             .get<Article>(uri)
@@ -34,7 +37,7 @@ export class ArticleService {
     }
 
     getArticlesLast(): Observable<Article[]> {
-        const uri = 'https://shielded-oasis-48709.herokuapp.com/data/articles/last';
+        const uri = this.path + '/data/articles/last';
         return this
             .http
             .get<Article[]>(uri)
@@ -45,8 +48,8 @@ export class ArticleService {
 
     // ADD article
     addArticle(heading, description, shortDescription, imageName, img): Observable<Article> {
-        const uri = 'https://shielded-oasis-48709.herokuapp.com/data/articles/add';
-        const uri_img = 'https://shielded-oasis-48709.herokuapp.com/data/articles/upload';
+        const uri = this.path + '/data/articles/add';
+        const uri_img = this.path + '/data/articles/upload';
         const headers = new HttpHeaders();
         const obj = {
             heading: heading,
@@ -68,7 +71,7 @@ export class ArticleService {
 
     // DELETE article
     delArticle(id:any) {
-        const uri = 'https://shielded-oasis-48709.herokuapp.com/data/articles/delete/' + id;
+        const uri = this.path + '/data/articles/delete/' + id;
         return this
             .http
             .get(uri)

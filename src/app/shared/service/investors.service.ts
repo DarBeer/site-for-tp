@@ -3,17 +3,20 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from "rxjs";
 import { Investor } from '../../data/investor';
 import { catchError, map } from 'rxjs/operators';
+import { Path } from './path';
 
 @Injectable({
   providedIn: 'root'
 })
 export class InvestorsService {
 
+  path = Path.path;
+
   constructor(private http: HttpClient) { }
 
   // GET Investors
   getInvestor(): Observable<Investor[]> {
-    const uri = 'https://shielded-oasis-48709.herokuapp.com/data/investors';
+    const uri = this.path + '/data/investors';
     return this
         .http
         .get<Investor[]>(uri)
@@ -24,8 +27,8 @@ export class InvestorsService {
 
 // ADD Investors
 addInvestor(name, urlToInv, imageName, img): Observable<Investor> {
-    const uri = 'https://shielded-oasis-48709.herokuapp.com/data/investors/add';
-    const uri_img = 'https://shielded-oasis-48709.herokuapp.com/data/investors/upload';
+    const uri = this.path + '/data/investors/add';
+    const uri_img = this.path + '/data/investors/upload';
     const headers = new HttpHeaders();
     const obj = {
         name: name,
@@ -45,7 +48,7 @@ addInvestor(name, urlToInv, imageName, img): Observable<Investor> {
 
 // DELETE Investors
 delInvestor(id:any) {
-    const uri = 'https://shielded-oasis-48709.herokuapp.com/data/investors/delete/' + id;
+    const uri = this.path + '/data/investors/delete/' + id;
     return this
         .http
         .get(uri)

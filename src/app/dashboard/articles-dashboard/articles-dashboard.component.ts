@@ -4,6 +4,8 @@ import { Component, OnInit, ViewChild, HostListener, AfterViewInit, ChangeDetect
 import { FormGroup,  FormBuilder,  Validators } from "@angular/forms";
 import { ToastrService } from 'ngx-toastr';
 
+import { Path } from '../../shared/service/path';
+
 import { Article } from 'src/app/data/article';
 import { ArticleService } from 'src/app/shared/service/atricle.service';
 
@@ -13,6 +15,8 @@ import { ArticleService } from 'src/app/shared/service/atricle.service';
   styleUrls: ['./articles-dashboard.component.scss']
 })
 export class ArticlesDashboardComponent implements OnInit, AfterViewInit {
+
+  path = Path.path;
 
   private errorMessage: string;
   articles: Article[];
@@ -89,7 +93,7 @@ export class ArticlesDashboardComponent implements OnInit, AfterViewInit {
     let imageName;
     if (this.imageFile !== null) {
         img.append('articleImage', this.imageFile, this.imageFile.name);
-        imageName = 'https://shielded-oasis-48709.herokuapp.com/uploads/article/' + this.imageFile.name;
+        imageName = this.path + '/uploads/article/' + this.imageFile.name;
         this.service.addArticle(heading, description, shortDescription, imageName, img)
             .subscribe(
                 article => {
