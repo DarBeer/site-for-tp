@@ -703,31 +703,37 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var src_app_shared_service_atricle_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    var _shared_service_path__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! ../../shared/service/path */
+    "./src/app/shared/service/path.ts");
+    /* harmony import */
+
+
+    var src_app_shared_service_atricle_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! src/app/shared/service/atricle.service */
     "./src/app/shared/service/atricle.service.ts");
     /* harmony import */
 
 
-    var ngx_toastr__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    var ngx_toastr__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! ngx-toastr */
     "./node_modules/ngx-toastr/__ivy_ngcc__/fesm2015/ngx-toastr.js");
     /* harmony import */
 
 
-    var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    var _angular_common__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
     /*! @angular/common */
     "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
     /* harmony import */
 
 
-    var angular_froala_wysiwyg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    var angular_froala_wysiwyg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
     /*! angular-froala-wysiwyg */
     "./node_modules/angular-froala-wysiwyg/__ivy_ngcc__/index.js");
     /* harmony import */
 
 
-    var angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    var angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
     /*! angular-bootstrap-md */
     "./node_modules/angular-bootstrap-md/__ivy_ngcc__/fesm2015/angular-bootstrap-md.js");
 
@@ -875,6 +881,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.service = service;
         this.toastr = toastr;
         this.form = form;
+        this.path = _shared_service_path__WEBPACK_IMPORTED_MODULE_2__["Path"].path;
         this.imageFile = null;
         this.imageDef = '../../../assets/img/noimage.png';
         this.createForm();
@@ -959,7 +966,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           if (this.imageFile !== null) {
             img.append('articleImage', this.imageFile, this.imageFile.name);
-            imageName = 'https://shielded-oasis-48709.herokuapp.com/uploads/article/' + this.imageFile.name;
+            imageName = this.path + '/uploads/article/' + this.imageFile.name;
             this.service.addArticle(heading, description, shortDescription, imageName, img).subscribe(function (article) {
               _this4.articles.push(article);
 
@@ -995,7 +1002,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }();
 
     ArticlesDashboardComponent.ɵfac = function ArticlesDashboardComponent_Factory(t) {
-      return new (t || ArticlesDashboardComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_atricle_service__WEBPACK_IMPORTED_MODULE_2__["ArticleService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](ngx_toastr__WEBPACK_IMPORTED_MODULE_3__["ToastrService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"]));
+      return new (t || ArticlesDashboardComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_atricle_service__WEBPACK_IMPORTED_MODULE_3__["ArticleService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"]));
     };
 
     ArticlesDashboardComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
@@ -1159,7 +1166,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.articles);
         }
       },
-      directives: [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormGroupDirective"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControlName"], _angular_common__WEBPACK_IMPORTED_MODULE_4__["NgIf"], angular_froala_wysiwyg__WEBPACK_IMPORTED_MODULE_5__["FroalaEditorDirective"], _angular_common__WEBPACK_IMPORTED_MODULE_4__["NgForOf"], angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_6__["MdbCardComponent"], angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_6__["WavesDirective"], angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_6__["MdbCardImageComponent"], angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_6__["MdbCardBodyComponent"], angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_6__["MdbCardTitleComponent"], angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_6__["MdbCardTextComponent"], angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_6__["MdbBtnDirective"]],
+      directives: [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormGroupDirective"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControlName"], _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], angular_froala_wysiwyg__WEBPACK_IMPORTED_MODULE_6__["FroalaEditorDirective"], _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgForOf"], angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_7__["MdbCardComponent"], angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_7__["WavesDirective"], angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_7__["MdbCardImageComponent"], angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_7__["MdbCardBodyComponent"], angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_7__["MdbCardTitleComponent"], angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_7__["MdbCardTextComponent"], angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_7__["MdbBtnDirective"]],
       styles: [".table-img[_ngcontent-%COMP%] {\n  width: 20vw;\n}\n\nthead[_ngcontent-%COMP%]   tr[_ngcontent-%COMP%] {\n  font-weight: 700;\n}\n\ntd[_ngcontent-%COMP%]:nth-child(1) {\n  width: 20%;\n}\n\ntd[_ngcontent-%COMP%]:nth-child(2) {\n  width: 20%;\n}\n\ntd[_ngcontent-%COMP%]:nth-child(3) {\n  width: 15%;\n}\n\ntd[_ngcontent-%COMP%]:nth-child(4) {\n  max-width: 410px;\n}\n\ntd[_ngcontent-%COMP%]:nth-child(5) {\n  width: 5%;\n}\n\ntr[_ngcontent-%COMP%]   td[_ngcontent-%COMP%]   img[_ngcontent-%COMP%] {\n  max-width: 300px;\n  max-height: 200px;\n}\n\n.image-container[_ngcontent-%COMP%]   label[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.image-container[_ngcontent-%COMP%]   .img-preview[_ngcontent-%COMP%] {\n  height: 600px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 100%;\n  background: #ccc;\n}\n\n.image-container[_ngcontent-%COMP%]   .img-preview[_ngcontent-%COMP%]   img[_ngcontent-%COMP%] {\n  max-width: 100%;\n  max-height: 100%;\n}\n\n.del-btn[_ngcontent-%COMP%] {\n  cursor: pointer;\n}\n\n.del-btn[_ngcontent-%COMP%]:hover   i[_ngcontent-%COMP%] {\n  transition: all 0.2s ease;\n  color: red;\n}\n\n.overflow-hidden[_ngcontent-%COMP%] {\n  overflow: scroll;\n  max-height: 150px;\n}\n\n.button[_ngcontent-%COMP%] {\n  background-color: #47c25b;\n  color: #ffffff;\n  font-weight: bold;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZGFzaGJvYXJkL2FydGljbGVzLWRhc2hib2FyZC9EOlxcRm9ySm9iXFxmb3ItdHBcXHNpdGUtZm9yLXRwL3NyY1xcYXBwXFxkYXNoYm9hcmRcXGFydGljbGVzLWRhc2hib2FyZFxcYXJ0aWNsZXMtZGFzaGJvYXJkLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9kYXNoYm9hcmQvYXJ0aWNsZXMtZGFzaGJvYXJkL2FydGljbGVzLWRhc2hib2FyZC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFHQTtFQUNJLFdBQUE7QUNGSjs7QURLQTtFQUNJLGdCQUFBO0FDRko7O0FESUU7RUFDRSxVQUFBO0FDREo7O0FER0U7RUFDRSxVQUFBO0FDQUo7O0FERUU7RUFDRSxVQUFBO0FDQ0o7O0FEQ0U7RUFDRSxnQkFBQTtBQ0VKOztBREFFO0VBQ0UsU0FBQTtBQ0dKOztBRERFO0VBQ0UsZ0JBQUE7RUFDQSxpQkFBQTtBQ0lKOztBRERJO0VBQ0UsV0FBQTtBQ0lOOztBREZJO0VBQ0UsYUFBQTtFQUNBLGFBQUE7RUFDQSx1QkFBQTtFQUNBLG1CQUFBO0VBQ0EsV0FBQTtFQUNBLGdCQUFBO0FDSU47O0FESE07RUFDRSxlQUFBO0VBQ0EsZ0JBQUE7QUNLUjs7QURERTtFQUNFLGVBQUE7QUNJSjs7QURGRTtFQUNFLHlCQUFBO0VBQ0EsVUFBQTtBQ0tKOztBREZFO0VBQ0UsZ0JBQUE7RUFDQSxpQkFBQTtBQ0tKOztBREZFO0VBQ0UseUJBNURJO0VBNkRKLGNBNURJO0VBNkRKLGlCQUFBO0FDS0oiLCJmaWxlIjoic3JjL2FwcC9kYXNoYm9hcmQvYXJ0aWNsZXMtZGFzaGJvYXJkL2FydGljbGVzLWRhc2hib2FyZC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIiRncmVhbjogIzQ3YzI1YjtcclxuJHdoaXRlOiAjZmZmZmZmO1xyXG5cclxuLnRhYmxlLWltZyB7XHJcbiAgICB3aWR0aDogMjB2dztcclxufVxyXG5cclxudGhlYWQgdHIge1xyXG4gICAgZm9udC13ZWlnaHQ6IDcwMDtcclxuICB9XHJcbiAgdGQ6bnRoLWNoaWxkKDEpIHtcclxuICAgIHdpZHRoOiAyMCU7XHJcbiAgfVxyXG4gIHRkOm50aC1jaGlsZCgyKSB7XHJcbiAgICB3aWR0aDogMjAlO1xyXG4gIH1cclxuICB0ZDpudGgtY2hpbGQoMykge1xyXG4gICAgd2lkdGg6IDE1JTtcclxuICB9XHJcbiAgdGQ6bnRoLWNoaWxkKDQpIHtcclxuICAgIG1heC13aWR0aDogNDEwcHg7XHJcbiAgfVxyXG4gIHRkOm50aC1jaGlsZCg1KSB7XHJcbiAgICB3aWR0aDogNSU7XHJcbiAgfVxyXG4gIHRyIHRkIGltZyB7XHJcbiAgICBtYXgtd2lkdGg6IDMwMHB4O1xyXG4gICAgbWF4LWhlaWdodDogMjAwcHg7XHJcbiAgfVxyXG4gIC5pbWFnZS1jb250YWluZXIge1xyXG4gICAgbGFiZWwge1xyXG4gICAgICB3aWR0aDogMTAwJTtcclxuICAgIH1cclxuICAgIC5pbWctcHJldmlldyB7XHJcbiAgICAgIGhlaWdodDogNjAwcHg7XHJcbiAgICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gICAgICB3aWR0aDogMTAwJTtcclxuICAgICAgYmFja2dyb3VuZDogI2NjYztcclxuICAgICAgaW1nIHtcclxuICAgICAgICBtYXgtd2lkdGg6IDEwMCU7XHJcbiAgICAgICAgbWF4LWhlaWdodDogMTAwJTtcclxuICAgICAgfVxyXG4gICAgfVxyXG4gIH1cclxuICAuZGVsLWJ0biB7XHJcbiAgICBjdXJzb3I6IHBvaW50ZXI7XHJcbiAgfVxyXG4gIC5kZWwtYnRuOmhvdmVyIGkge1xyXG4gICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcclxuICAgIGNvbG9yOiByZWQ7XHJcbiAgfVxyXG5cclxuICAub3ZlcmZsb3ctaGlkZGVuIHtcclxuICAgIG92ZXJmbG93OiBzY3JvbGw7XHJcbiAgICBtYXgtaGVpZ2h0OiAxNTBweDtcclxuICB9XHJcblxyXG4gIC5idXR0b24ge1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogJGdyZWFuO1xyXG4gICAgY29sb3I6ICR3aGl0ZTtcclxuICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG59IiwiLnRhYmxlLWltZyB7XG4gIHdpZHRoOiAyMHZ3O1xufVxuXG50aGVhZCB0ciB7XG4gIGZvbnQtd2VpZ2h0OiA3MDA7XG59XG5cbnRkOm50aC1jaGlsZCgxKSB7XG4gIHdpZHRoOiAyMCU7XG59XG5cbnRkOm50aC1jaGlsZCgyKSB7XG4gIHdpZHRoOiAyMCU7XG59XG5cbnRkOm50aC1jaGlsZCgzKSB7XG4gIHdpZHRoOiAxNSU7XG59XG5cbnRkOm50aC1jaGlsZCg0KSB7XG4gIG1heC13aWR0aDogNDEwcHg7XG59XG5cbnRkOm50aC1jaGlsZCg1KSB7XG4gIHdpZHRoOiA1JTtcbn1cblxudHIgdGQgaW1nIHtcbiAgbWF4LXdpZHRoOiAzMDBweDtcbiAgbWF4LWhlaWdodDogMjAwcHg7XG59XG5cbi5pbWFnZS1jb250YWluZXIgbGFiZWwge1xuICB3aWR0aDogMTAwJTtcbn1cbi5pbWFnZS1jb250YWluZXIgLmltZy1wcmV2aWV3IHtcbiAgaGVpZ2h0OiA2MDBweDtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIHdpZHRoOiAxMDAlO1xuICBiYWNrZ3JvdW5kOiAjY2NjO1xufVxuLmltYWdlLWNvbnRhaW5lciAuaW1nLXByZXZpZXcgaW1nIHtcbiAgbWF4LXdpZHRoOiAxMDAlO1xuICBtYXgtaGVpZ2h0OiAxMDAlO1xufVxuXG4uZGVsLWJ0biB7XG4gIGN1cnNvcjogcG9pbnRlcjtcbn1cblxuLmRlbC1idG46aG92ZXIgaSB7XG4gIHRyYW5zaXRpb246IGFsbCAwLjJzIGVhc2U7XG4gIGNvbG9yOiByZWQ7XG59XG5cbi5vdmVyZmxvdy1oaWRkZW4ge1xuICBvdmVyZmxvdzogc2Nyb2xsO1xuICBtYXgtaGVpZ2h0OiAxNTBweDtcbn1cblxuLmJ1dHRvbiB7XG4gIGJhY2tncm91bmQtY29sb3I6ICM0N2MyNWI7XG4gIGNvbG9yOiAjZmZmZmZmO1xuICBmb250LXdlaWdodDogYm9sZDtcbn0iXX0= */"]
     });
     /*@__PURE__*/
@@ -1176,9 +1183,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         return [{
           type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"]
         }, {
-          type: src_app_shared_service_atricle_service__WEBPACK_IMPORTED_MODULE_2__["ArticleService"]
+          type: src_app_shared_service_atricle_service__WEBPACK_IMPORTED_MODULE_3__["ArticleService"]
         }, {
-          type: ngx_toastr__WEBPACK_IMPORTED_MODULE_3__["ToastrService"]
+          type: ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"]
         }, {
           type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"]
         }];
@@ -1514,25 +1521,31 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var src_app_shared_service_investors_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    var src_app_shared_service_path__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! src/app/shared/service/path */
+    "./src/app/shared/service/path.ts");
+    /* harmony import */
+
+
+    var src_app_shared_service_investors_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! src/app/shared/service/investors.service */
     "./src/app/shared/service/investors.service.ts");
     /* harmony import */
 
 
-    var ngx_toastr__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    var ngx_toastr__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! ngx-toastr */
     "./node_modules/ngx-toastr/__ivy_ngcc__/fesm2015/ngx-toastr.js");
     /* harmony import */
 
 
-    var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    var _angular_common__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
     /*! @angular/common */
     "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
     /* harmony import */
 
 
-    var angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    var angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
     /*! angular-bootstrap-md */
     "./node_modules/angular-bootstrap-md/__ivy_ngcc__/fesm2015/angular-bootstrap-md.js");
 
@@ -1695,6 +1708,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.service = service;
         this.form = form;
         this.toastr = toastr;
+        this.path = src_app_shared_service_path__WEBPACK_IMPORTED_MODULE_2__["Path"].path;
         this.headElements = ['Изображение', 'ID', 'Название', 'Ссылка на инвестора', 'Редактировать'];
         this.imageFile = null;
         this.imageDef = '../../../assets/img/noimage.png';
@@ -1770,7 +1784,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           if (this.imageFile !== null) {
             img.append('investorImage', this.imageFile, this.imageFile.name);
-            imageName = 'https://shielded-oasis-48709.herokuapp.com/uploads/investors/' + this.imageFile.name;
+            imageName = this.path + '/uploads/investors/' + this.imageFile.name;
             this.service.addInvestor(name, urlToInv, imageName, img).subscribe(function (investor) {
               _this8.investors.push(investor);
 
@@ -1806,7 +1820,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }();
 
     InvestorsDashboardComponent.ɵfac = function InvestorsDashboardComponent_Factory(t) {
-      return new (t || InvestorsDashboardComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_investors_service__WEBPACK_IMPORTED_MODULE_2__["InvestorsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](ngx_toastr__WEBPACK_IMPORTED_MODULE_3__["ToastrService"]));
+      return new (t || InvestorsDashboardComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_investors_service__WEBPACK_IMPORTED_MODULE_3__["InvestorsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"]));
     };
 
     InvestorsDashboardComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
@@ -1966,7 +1980,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.investors);
         }
       },
-      directives: [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormGroupDirective"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControlName"], _angular_common__WEBPACK_IMPORTED_MODULE_4__["NgIf"], angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_5__["MdbTableDirective"], _angular_common__WEBPACK_IMPORTED_MODULE_4__["NgForOf"], angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_5__["MdbBtnDirective"], angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_5__["WavesDirective"]],
+      directives: [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormGroupDirective"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControlName"], _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_6__["MdbTableDirective"], _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgForOf"], angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_6__["MdbBtnDirective"], angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_6__["WavesDirective"]],
       styles: ["*[_ngcontent-%COMP%] {\n  font-family: \"Ubuntu\", sans-serif;\n}\n\n.button[_ngcontent-%COMP%] {\n  background-color: #47c25b;\n  color: #ffffff;\n  font-weight: bold;\n}\n\n.image-container[_ngcontent-%COMP%]   label[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.image-container[_ngcontent-%COMP%]   .img-preview[_ngcontent-%COMP%] {\n  height: 600px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 100%;\n  background: #ccc;\n}\n\n.image-container[_ngcontent-%COMP%]   .img-preview[_ngcontent-%COMP%]   img[_ngcontent-%COMP%] {\n  max-width: 100%;\n  max-height: 100%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZGFzaGJvYXJkL2ludmVzdG9ycy1kYXNoYm9hcmQvRDpcXEZvckpvYlxcZm9yLXRwXFxzaXRlLWZvci10cC9zcmNcXGFwcFxcZGFzaGJvYXJkXFxpbnZlc3RvcnMtZGFzaGJvYXJkXFxpbnZlc3RvcnMtZGFzaGJvYXJkLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9kYXNoYm9hcmQvaW52ZXN0b3JzLWRhc2hib2FyZC9pbnZlc3RvcnMtZGFzaGJvYXJkLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUdBO0VBQ0ksaUNBQUE7QUNGSjs7QURLQTtFQUNJLHlCQVJJO0VBU0osY0FSSTtFQVNKLGlCQUFBO0FDRko7O0FETUk7RUFDSSxXQUFBO0FDSFI7O0FES0k7RUFDSSxhQUFBO0VBQ0EsYUFBQTtFQUNBLHVCQUFBO0VBQ0EsbUJBQUE7RUFDQSxXQUFBO0VBQ0EsZ0JBQUE7QUNIUjs7QURJUTtFQUNJLGVBQUE7RUFDQSxnQkFBQTtBQ0ZaIiwiZmlsZSI6InNyYy9hcHAvZGFzaGJvYXJkL2ludmVzdG9ycy1kYXNoYm9hcmQvaW52ZXN0b3JzLWRhc2hib2FyZC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIiRncmVhbjogIzQ3YzI1YjtcclxuJHdoaXRlOiAjZmZmZmZmO1xyXG5cclxuKiB7XHJcbiAgICBmb250LWZhbWlseTogJ1VidW50dScsIHNhbnMtc2VyaWY7XHJcbn1cclxuXHJcbi5idXR0b24ge1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogJGdyZWFuO1xyXG4gICAgY29sb3I6ICR3aGl0ZTtcclxuICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG59XHJcblxyXG4uaW1hZ2UtY29udGFpbmVyIHtcclxuICAgIGxhYmVsIHtcclxuICAgICAgICB3aWR0aDogMTAwJTtcclxuICAgIH1cclxuICAgIC5pbWctcHJldmlldyB7XHJcbiAgICAgICAgaGVpZ2h0OiA2MDBweDtcclxuICAgICAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcbiAgICAgICAgd2lkdGg6IDEwMCU7XHJcbiAgICAgICAgYmFja2dyb3VuZDogI2NjYztcclxuICAgICAgICBpbWcge1xyXG4gICAgICAgICAgICBtYXgtd2lkdGg6IDEwMCU7XHJcbiAgICAgICAgICAgIG1heC1oZWlnaHQ6IDEwMCU7XHJcbiAgICAgICAgfSAgIFxyXG4gICAgfVxyXG59IiwiKiB7XG4gIGZvbnQtZmFtaWx5OiBcIlVidW50dVwiLCBzYW5zLXNlcmlmO1xufVxuXG4uYnV0dG9uIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogIzQ3YzI1YjtcbiAgY29sb3I6ICNmZmZmZmY7XG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xufVxuXG4uaW1hZ2UtY29udGFpbmVyIGxhYmVsIHtcbiAgd2lkdGg6IDEwMCU7XG59XG4uaW1hZ2UtY29udGFpbmVyIC5pbWctcHJldmlldyB7XG4gIGhlaWdodDogNjAwcHg7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICB3aWR0aDogMTAwJTtcbiAgYmFja2dyb3VuZDogI2NjYztcbn1cbi5pbWFnZS1jb250YWluZXIgLmltZy1wcmV2aWV3IGltZyB7XG4gIG1heC13aWR0aDogMTAwJTtcbiAgbWF4LWhlaWdodDogMTAwJTtcbn0iXX0= */"]
     });
     /*@__PURE__*/
@@ -1981,11 +1995,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }]
       }], function () {
         return [{
-          type: src_app_shared_service_investors_service__WEBPACK_IMPORTED_MODULE_2__["InvestorsService"]
+          type: src_app_shared_service_investors_service__WEBPACK_IMPORTED_MODULE_3__["InvestorsService"]
         }, {
           type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"]
         }, {
-          type: ngx_toastr__WEBPACK_IMPORTED_MODULE_3__["ToastrService"]
+          type: ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"]
         }];
       }, null);
     })();
@@ -2381,31 +2395,37 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var src_app_shared_service_services_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    var src_app_shared_service_path__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! src/app/shared/service/path */
+    "./src/app/shared/service/path.ts");
+    /* harmony import */
+
+
+    var src_app_shared_service_services_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! src/app/shared/service/services.service */
     "./src/app/shared/service/services.service.ts");
     /* harmony import */
 
 
-    var ngx_toastr__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    var ngx_toastr__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! ngx-toastr */
     "./node_modules/ngx-toastr/__ivy_ngcc__/fesm2015/ngx-toastr.js");
     /* harmony import */
 
 
-    var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    var _angular_common__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
     /*! @angular/common */
     "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
     /* harmony import */
 
 
-    var angular_froala_wysiwyg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    var angular_froala_wysiwyg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
     /*! angular-froala-wysiwyg */
     "./node_modules/angular-froala-wysiwyg/__ivy_ngcc__/index.js");
     /* harmony import */
 
 
-    var angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    var angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
     /*! angular-bootstrap-md */
     "./node_modules/angular-bootstrap-md/__ivy_ngcc__/fesm2015/angular-bootstrap-md.js");
 
@@ -2553,6 +2573,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.serviceForService = serviceForService;
         this.toastr = toastr;
         this.form = form;
+        this.path = src_app_shared_service_path__WEBPACK_IMPORTED_MODULE_2__["Path"].path;
         this.imageFile = null;
         this.imageDef = '../../../assets/img/noimage.png';
         this.ctreateForm();
@@ -2630,7 +2651,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           if (this.imageFile !== null) {
             img.append('serviceImage', this.imageFile, this.imageFile.name);
-            imageName = 'https://shielded-oasis-48709.herokuapp.com/uploads/service/' + this.imageFile.name;
+            imageName = this.path + '/uploads/service/' + this.imageFile.name;
             this.serviceForService.addService(heading, description, shortDescription, imageName, img).subscribe(function (service) {
               _this15.services.push(service);
 
@@ -2666,7 +2687,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }();
 
     ServicesDashboardComponent.ɵfac = function ServicesDashboardComponent_Factory(t) {
-      return new (t || ServicesDashboardComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_services_service__WEBPACK_IMPORTED_MODULE_2__["ServicesService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](ngx_toastr__WEBPACK_IMPORTED_MODULE_3__["ToastrService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"]));
+      return new (t || ServicesDashboardComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_services_service__WEBPACK_IMPORTED_MODULE_3__["ServicesService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"]));
     };
 
     ServicesDashboardComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
@@ -2830,7 +2851,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.services);
         }
       },
-      directives: [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormGroupDirective"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControlName"], _angular_common__WEBPACK_IMPORTED_MODULE_4__["NgIf"], angular_froala_wysiwyg__WEBPACK_IMPORTED_MODULE_5__["FroalaEditorDirective"], _angular_common__WEBPACK_IMPORTED_MODULE_4__["NgForOf"], angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_6__["MdbCardComponent"], angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_6__["WavesDirective"], angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_6__["MdbCardImageComponent"], angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_6__["MdbCardBodyComponent"], angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_6__["MdbCardTitleComponent"], angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_6__["MdbCardTextComponent"], angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_6__["MdbBtnDirective"]],
+      directives: [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormGroupDirective"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControlName"], _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], angular_froala_wysiwyg__WEBPACK_IMPORTED_MODULE_6__["FroalaEditorDirective"], _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgForOf"], angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_7__["MdbCardComponent"], angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_7__["WavesDirective"], angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_7__["MdbCardImageComponent"], angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_7__["MdbCardBodyComponent"], angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_7__["MdbCardTitleComponent"], angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_7__["MdbCardTextComponent"], angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_7__["MdbBtnDirective"]],
       styles: ["*[_ngcontent-%COMP%] {\n  font-family: \"Ubuntu\", sans-serif;\n}\n\n.button[_ngcontent-%COMP%] {\n  background-color: #47c25b;\n  color: #ffffff;\n  font-weight: bold;\n}\n\n.container[_ngcontent-%COMP%] {\n  margin-bottom: 20px;\n  margin-top: 4em;\n}\n\n.image-container[_ngcontent-%COMP%]   label[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.image-container[_ngcontent-%COMP%]   .img-preview[_ngcontent-%COMP%] {\n  height: 600px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 100%;\n  background: #ccc;\n}\n\n.image-container[_ngcontent-%COMP%]   .img-preview[_ngcontent-%COMP%]   img[_ngcontent-%COMP%] {\n  max-width: 100%;\n  max-height: 100%;\n}\n\n.del-btn[_ngcontent-%COMP%] {\n  cursor: pointer;\n}\n\n.del-btn[_ngcontent-%COMP%]:hover   i[_ngcontent-%COMP%] {\n  transition: all 0.2s ease;\n  color: red;\n}\n\n.overflow-hidden[_ngcontent-%COMP%] {\n  overflow: scroll;\n  max-height: 150px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZGFzaGJvYXJkL3NlcnZpY2VzLWRhc2hib2FyZC9EOlxcRm9ySm9iXFxmb3ItdHBcXHNpdGUtZm9yLXRwL3NyY1xcYXBwXFxkYXNoYm9hcmRcXHNlcnZpY2VzLWRhc2hib2FyZFxcc2VydmljZXMtZGFzaGJvYXJkLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9kYXNoYm9hcmQvc2VydmljZXMtZGFzaGJvYXJkL3NlcnZpY2VzLWRhc2hib2FyZC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFHQTtFQUNJLGlDQUFBO0FDRko7O0FES0E7RUFDSSx5QkFSSTtFQVNKLGNBUkk7RUFTSixpQkFBQTtBQ0ZKOztBREtBO0VBQ0ksbUJBQUE7RUFDQSxlQUFBO0FDRko7O0FETUk7RUFDRSxXQUFBO0FDSE47O0FES0k7RUFDRSxhQUFBO0VBQ0EsYUFBQTtFQUNBLHVCQUFBO0VBQ0EsbUJBQUE7RUFDQSxXQUFBO0VBQ0EsZ0JBQUE7QUNITjs7QURJTTtFQUNFLGVBQUE7RUFDQSxnQkFBQTtBQ0ZSOztBRE1FO0VBQ0UsZUFBQTtBQ0hKOztBREtFO0VBQ0UseUJBQUE7RUFDQSxVQUFBO0FDRko7O0FES0U7RUFDRSxnQkFBQTtFQUNBLGlCQUFBO0FDRkoiLCJmaWxlIjoic3JjL2FwcC9kYXNoYm9hcmQvc2VydmljZXMtZGFzaGJvYXJkL3NlcnZpY2VzLWRhc2hib2FyZC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIiRncmVhbjogIzQ3YzI1YjtcclxuJHdoaXRlOiAjZmZmZmZmO1xyXG5cclxuKiB7XHJcbiAgICBmb250LWZhbWlseTogJ1VidW50dScsIHNhbnMtc2VyaWY7XHJcbn1cclxuXHJcbi5idXR0b24ge1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogJGdyZWFuO1xyXG4gICAgY29sb3I6ICR3aGl0ZTtcclxuICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG59XHJcblxyXG4uY29udGFpbmVyIHtcclxuICAgIG1hcmdpbi1ib3R0b206IDIwcHg7XHJcbiAgICBtYXJnaW4tdG9wOiA0ZW07XHJcbn0gXHJcblxyXG4uaW1hZ2UtY29udGFpbmVyIHtcclxuICAgIGxhYmVsIHtcclxuICAgICAgd2lkdGg6IDEwMCU7XHJcbiAgICB9XHJcbiAgICAuaW1nLXByZXZpZXcge1xyXG4gICAgICBoZWlnaHQ6IDYwMHB4O1xyXG4gICAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxuICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuICAgICAgd2lkdGg6IDEwMCU7XHJcbiAgICAgIGJhY2tncm91bmQ6ICNjY2M7XHJcbiAgICAgIGltZyB7XHJcbiAgICAgICAgbWF4LXdpZHRoOiAxMDAlO1xyXG4gICAgICAgIG1heC1oZWlnaHQ6IDEwMCU7XHJcbiAgICAgIH1cclxuICAgIH1cclxuICB9XHJcbiAgLmRlbC1idG4ge1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG4gIH1cclxuICAuZGVsLWJ0bjpob3ZlciBpIHtcclxuICAgIHRyYW5zaXRpb246IGFsbCAwLjJzIGVhc2U7XHJcbiAgICBjb2xvcjogcmVkO1xyXG4gIH1cclxuXHJcbiAgLm92ZXJmbG93LWhpZGRlbiB7XHJcbiAgICBvdmVyZmxvdzogc2Nyb2xsO1xyXG4gICAgbWF4LWhlaWdodDogMTUwcHg7XHJcbiAgfSIsIioge1xuICBmb250LWZhbWlseTogXCJVYnVudHVcIiwgc2Fucy1zZXJpZjtcbn1cblxuLmJ1dHRvbiB7XG4gIGJhY2tncm91bmQtY29sb3I6ICM0N2MyNWI7XG4gIGNvbG9yOiAjZmZmZmZmO1xuICBmb250LXdlaWdodDogYm9sZDtcbn1cblxuLmNvbnRhaW5lciB7XG4gIG1hcmdpbi1ib3R0b206IDIwcHg7XG4gIG1hcmdpbi10b3A6IDRlbTtcbn1cblxuLmltYWdlLWNvbnRhaW5lciBsYWJlbCB7XG4gIHdpZHRoOiAxMDAlO1xufVxuLmltYWdlLWNvbnRhaW5lciAuaW1nLXByZXZpZXcge1xuICBoZWlnaHQ6IDYwMHB4O1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgd2lkdGg6IDEwMCU7XG4gIGJhY2tncm91bmQ6ICNjY2M7XG59XG4uaW1hZ2UtY29udGFpbmVyIC5pbWctcHJldmlldyBpbWcge1xuICBtYXgtd2lkdGg6IDEwMCU7XG4gIG1heC1oZWlnaHQ6IDEwMCU7XG59XG5cbi5kZWwtYnRuIHtcbiAgY3Vyc29yOiBwb2ludGVyO1xufVxuXG4uZGVsLWJ0bjpob3ZlciBpIHtcbiAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcbiAgY29sb3I6IHJlZDtcbn1cblxuLm92ZXJmbG93LWhpZGRlbiB7XG4gIG92ZXJmbG93OiBzY3JvbGw7XG4gIG1heC1oZWlnaHQ6IDE1MHB4O1xufSJdfQ== */"]
     });
     /*@__PURE__*/
@@ -2847,9 +2868,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         return [{
           type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"]
         }, {
-          type: src_app_shared_service_services_service__WEBPACK_IMPORTED_MODULE_2__["ServicesService"]
+          type: src_app_shared_service_services_service__WEBPACK_IMPORTED_MODULE_3__["ServicesService"]
         }, {
-          type: ngx_toastr__WEBPACK_IMPORTED_MODULE_3__["ToastrService"]
+          type: ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"]
         }, {
           type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"]
         }];
@@ -3229,6 +3250,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! rxjs/operators */
     "./node_modules/rxjs/_esm2015/operators/index.js");
+    /* harmony import */
+
+
+    var _path__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! ./path */
+    "./src/app/shared/service/path.ts");
 
     var ArticleService =
     /*#__PURE__*/
@@ -3237,13 +3264,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _classCallCheck(this, ArticleService);
 
         this.http = http;
+        this.path = _path__WEBPACK_IMPORTED_MODULE_3__["Path"].path;
       } // GET articles
 
 
       _createClass(ArticleService, [{
         key: "getArticles",
         value: function getArticles() {
-          var uri = 'https://shielded-oasis-48709.herokuapp.com/data/articles';
+          var uri = this.path + '/data/articles';
           return this.http.get(uri).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) {
             return res;
           }));
@@ -3252,7 +3280,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "getArticle",
         value: function getArticle(id) {
-          var uri = 'https://shielded-oasis-48709.herokuapp.com/data/articles/get-one/' + id;
+          var uri = this.path + '/data/articles/get-one/' + id;
           return this.http.get(uri).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) {
             return res;
           }));
@@ -3260,7 +3288,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "getArticlesLast",
         value: function getArticlesLast() {
-          var uri = 'https://shielded-oasis-48709.herokuapp.com/data/articles/last';
+          var uri = this.path + '/data/articles/last';
           return this.http.get(uri).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) {
             return res;
           }));
@@ -3269,8 +3297,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "addArticle",
         value: function addArticle(heading, description, shortDescription, imageName, img) {
-          var uri = 'https://shielded-oasis-48709.herokuapp.com/data/articles/add';
-          var uri_img = 'https://shielded-oasis-48709.herokuapp.com/data/articles/upload';
+          var uri = this.path + '/data/articles/add';
+          var uri_img = this.path + '/data/articles/upload';
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
           var obj = {
             heading: heading,
@@ -3292,7 +3320,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "delArticle",
         value: function delArticle(id) {
-          var uri = 'https://shielded-oasis-48709.herokuapp.com/data/articles/delete/' + id;
+          var uri = this.path + '/data/articles/delete/' + id;
           return this.http.get(uri).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) {
             return res;
           }));
@@ -3366,6 +3394,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! rxjs/operators */
     "./node_modules/rxjs/_esm2015/operators/index.js");
+    /* harmony import */
+
+
+    var _path__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! ./path */
+    "./src/app/shared/service/path.ts");
 
     var InvestorsService =
     /*#__PURE__*/
@@ -3374,13 +3408,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _classCallCheck(this, InvestorsService);
 
         this.http = http;
+        this.path = _path__WEBPACK_IMPORTED_MODULE_3__["Path"].path;
       } // GET Investors
 
 
       _createClass(InvestorsService, [{
         key: "getInvestor",
         value: function getInvestor() {
-          var uri = 'https://shielded-oasis-48709.herokuapp.com/data/investors';
+          var uri = this.path + '/data/investors';
           return this.http.get(uri).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) {
             return res;
           }));
@@ -3389,8 +3424,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "addInvestor",
         value: function addInvestor(name, urlToInv, imageName, img) {
-          var uri = 'https://shielded-oasis-48709.herokuapp.com/data/investors/add';
-          var uri_img = 'https://shielded-oasis-48709.herokuapp.com/data/investors/upload';
+          var uri = this.path + '/data/investors/add';
+          var uri_img = this.path + '/data/investors/upload';
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
           var obj = {
             name: name,
@@ -3410,7 +3445,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "delInvestor",
         value: function delInvestor(id) {
-          var uri = 'https://shielded-oasis-48709.herokuapp.com/data/investors/delete/' + id;
+          var uri = this.path + '/data/investors/delete/' + id;
           return this.http.get(uri).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) {
             return res;
           }));
@@ -3562,6 +3597,33 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   },
 
   /***/
+  "./src/app/shared/service/path.ts":
+  /*!****************************************!*\
+    !*** ./src/app/shared/service/path.ts ***!
+    \****************************************/
+
+  /*! exports provided: Path */
+
+  /***/
+  function srcAppSharedServicePathTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "Path", function () {
+      return Path;
+    });
+
+    var Path = function Path() {
+      _classCallCheck(this, Path);
+    };
+    /***/
+
+  },
+
+  /***/
   "./src/app/shared/service/services.service.ts":
   /*!****************************************************!*\
     !*** ./src/app/shared/service/services.service.ts ***!
@@ -3598,6 +3660,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! rxjs/operators */
     "./node_modules/rxjs/_esm2015/operators/index.js");
+    /* harmony import */
+
+
+    var _path__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! ./path */
+    "./src/app/shared/service/path.ts");
 
     var ServicesService =
     /*#__PURE__*/
@@ -3606,13 +3674,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _classCallCheck(this, ServicesService);
 
         this.http = http;
+        this.path = _path__WEBPACK_IMPORTED_MODULE_3__["Path"].path;
       } // GET Services
 
 
       _createClass(ServicesService, [{
         key: "getServices",
         value: function getServices() {
-          var uri = 'https://shielded-oasis-48709.herokuapp.com/data/services';
+          var uri = this.path + '/data/services';
           return this.http.get(uri).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) {
             return res;
           }));
@@ -3621,7 +3690,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "getService",
         value: function getService(id) {
-          var uri = 'https://shielded-oasis-48709.herokuapp.com/data/services/get-one/' + id;
+          var uri = this.path + '/data/services/get-one/' + id;
           return this.http.get(uri).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) {
             return res;
           }));
@@ -3629,7 +3698,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "getServicesLast",
         value: function getServicesLast() {
-          var uri = 'https://shielded-oasis-48709.herokuapp.com/data/services/last';
+          var uri = this.path + '/data/services/last';
           return this.http.get(uri).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) {
             return res;
           }));
@@ -3638,8 +3707,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "addService",
         value: function addService(heading, description, shortDescription, imageName, img) {
-          var uri = 'https://shielded-oasis-48709.herokuapp.com/data/services/add';
-          var uri_img = 'https://shielded-oasis-48709.herokuapp.com/data/services/upload';
+          var uri = this.path + '/data/services/add';
+          var uri_img = this.path + '/data/services/upload';
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
           var obj = {
             heading: heading,
@@ -3660,7 +3729,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "delService",
         value: function delService(id) {
-          var uri = 'https://shielded-oasis-48709.herokuapp.com/data/services/delete/' + id;
+          var uri = this.path + '/data/services/delete/' + id;
           return this.http.get(uri).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) {
             return res;
           }));
