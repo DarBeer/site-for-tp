@@ -15,5 +15,8 @@ module.exports = {
                 index: '/index.html', verbose: true
             })
         }
+    },
+    ui: {
+        port: 3002
     }
 };

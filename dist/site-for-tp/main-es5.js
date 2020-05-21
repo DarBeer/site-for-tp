@@ -3519,6 +3519,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! rxjs/operators */
     "./node_modules/rxjs/_esm2015/operators/index.js");
+    /* harmony import */
+
+
+    var _path__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! ./path */
+    "./src/app/shared/service/path.ts");
 
     var KlasterService =
     /*#__PURE__*/
@@ -3527,13 +3533,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _classCallCheck(this, KlasterService);
 
         this.http = http;
+        this.path = _path__WEBPACK_IMPORTED_MODULE_3__["Path"].path;
       } // GET Klaster
 
 
       _createClass(KlasterService, [{
         key: "getKlaster",
         value: function getKlaster() {
-          var uri = 'https://shielded-oasis-48709.herokuapp.com/data/klaster';
+          var uri = this.path + '/data/klaster';
           return this.http.get(uri).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) {
             return res;
           }));
@@ -3542,7 +3549,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "addKlaster",
         value: function addKlaster(name, description) {
-          var uri = 'https://shielded-oasis-48709.herokuapp.com/data/klaster/add';
+          var uri = this.path + '/data/klaster/add';
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
           var obj = {
             name: name,
@@ -3559,7 +3566,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "delKlaster",
         value: function delKlaster(id) {
-          var uri = 'https://shielded-oasis-48709.herokuapp.com/data/klaster/delete/' + id;
+          var uri = this.path + '/data/klaster/delete/' + id;
           return this.http.get(uri).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) {
             return res;
           }));

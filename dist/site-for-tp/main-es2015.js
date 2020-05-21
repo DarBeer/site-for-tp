@@ -1768,6 +1768,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+/* harmony import */ var _path__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./path */ "./src/app/shared/service/path.ts");
+
 
 
 
@@ -1776,10 +1778,11 @@ __webpack_require__.r(__webpack_exports__);
 class KlasterService {
     constructor(http) {
         this.http = http;
+        this.path = _path__WEBPACK_IMPORTED_MODULE_3__["Path"].path;
     }
     // GET Klaster
     getKlaster() {
-        const uri = 'https://shielded-oasis-48709.herokuapp.com/data/klaster';
+        const uri = this.path + '/data/klaster';
         return this
             .http
             .get(uri)
@@ -1789,7 +1792,7 @@ class KlasterService {
     }
     // ADD Klaster
     addKlaster(name, description) {
-        const uri = 'https://shielded-oasis-48709.herokuapp.com/data/klaster/add';
+        const uri = this.path + '/data/klaster/add';
         const headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
         const obj = {
             name: name,
@@ -1804,7 +1807,7 @@ class KlasterService {
     }
     // DELETE Klaster
     delKlaster(id) {
-        const uri = 'https://shielded-oasis-48709.herokuapp.com/data/klaster/delete/' + id;
+        const uri = this.path + '/data/klaster/delete/' + id;
         return this
             .http
             .get(uri)

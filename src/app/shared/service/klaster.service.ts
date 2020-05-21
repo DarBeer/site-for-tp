@@ -3,17 +3,20 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from "rxjs";
 import { Klaster } from '../../data/klaster';
 import { catchError, map } from 'rxjs/operators';
+import { Path } from './path';
 
 @Injectable({
   providedIn: 'root'
 })
 export class KlasterService {
 
+  path = Path.path;
+
   constructor(private http: HttpClient) { }
 
   // GET Klaster
   getKlaster(): Observable<Klaster> {
-    const uri = 'https://shielded-oasis-48709.herokuapp.com/data/klaster';
+    const uri = this.path + '/data/klaster';
     return this
         .http
         .get<Klaster>(uri)
@@ -24,7 +27,7 @@ export class KlasterService {
 
 // ADD Klaster
 addKlaster(name, description): Observable<Klaster> {
-    const uri = 'https://shielded-oasis-48709.herokuapp.com/data/klaster/add';
+    const uri = this.path + '/data/klaster/add';
     const headers = new HttpHeaders();
     const obj = {
         name: name,
@@ -40,7 +43,7 @@ addKlaster(name, description): Observable<Klaster> {
 
 // DELETE Klaster
 delKlaster(id:any) {
-    const uri = 'https://shielded-oasis-48709.herokuapp.com/data/klaster/delete/' + id;
+    const uri = this.path + '/data/klaster/delete/' + id;
     return this
         .http
         .get(uri)
