@@ -1,3 +1,3 @@
 export class Path {
-    static path: "127.0.0.1:3000";
+    static path: "127.0.0.1:3001";
 }
