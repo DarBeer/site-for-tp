@@ -5,5 +5,5 @@ import { Injectable } from '@angular/core';
 })
 export class PathService {
 
-    static path: '127.0.0.1';
+    static path: string = '127.0.0.1:80/data/';
 }

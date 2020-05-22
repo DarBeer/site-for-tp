@@ -16,7 +16,7 @@ export class ArticleService {
 
     // GET articles
     getArticles(): Observable<Article[]> {
-        const uri = this.path + '/data/articles';
+        const uri = 'http://localhost:80/data/articles';
         return this
             .http
             .get<Article[]>(uri)
@@ -27,7 +27,7 @@ export class ArticleService {
 
     // GET article
     getArticle(id:any): Observable<Article> {
-        const uri = this.path + '/data/articles/get-one/' + id;
+        const uri = 'http://localhost:80/data/articles/get-one/' + id;
         return this
             .http
             .get<Article>(uri)
@@ -37,7 +37,7 @@ export class ArticleService {
     }
 
     getArticlesLast(): Observable<Article[]> {
-        const uri = this.path + '/data/articles/last';
+        const uri = 'http://localhost:80/data/articles/last';
         return this
             .http
             .get<Article[]>(uri)
@@ -48,8 +48,8 @@ export class ArticleService {
 
     // ADD article
     addArticle(heading, description, shortDescription, imageName, img): Observable<Article> {
-        const uri = this.path + '/data/articles/add';
-        const uri_img = this.path + '/data/articles/upload';
+        const uri = 'http://localhost:80/data/articles/add';
+        const uri_img = 'http://localhost:80/data/articles/upload';
         const headers = new HttpHeaders();
         const obj = {
             heading: heading,
@@ -71,7 +71,7 @@ export class ArticleService {
 
     // DELETE article
     delArticle(id:any) {
-        const uri = this.path + '/data/articles/delete/' + id;
+        const uri = 'http://localhost:80/data/articles/delete/' + id;
         return this
             .http
             .get(uri)
