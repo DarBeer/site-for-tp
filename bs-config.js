@@ -7,7 +7,7 @@ module.exports = {
         baseDir: './dist/site-for-tp/',
         middleware: {
             1: proxyMiddleware('/api', {
-                target: 'tp.polessu.by:80',
+                target: 'localhost:3001',
                 changeOrigin: true   // for vhosted sites, changes host header to match to target's host
             }),
 
