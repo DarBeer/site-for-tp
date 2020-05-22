@@ -3,14 +3,14 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from "rxjs";
 import { Investor } from '../../data/investor';
 import { catchError, map } from 'rxjs/operators';
-import { Path } from './path';
+import { PathService } from './path.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class InvestorsService {
 
-  path = Path.path;
+  path = PathService.path;
 
   constructor(private http: HttpClient) { }
 

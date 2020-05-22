@@ -703,9 +703,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _shared_service_path__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! ../../shared/service/path */
-    "./src/app/shared/service/path.ts");
+    var _shared_service_path_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! ../../shared/service/path.service */
+    "./src/app/shared/service/path.service.ts");
     /* harmony import */
 
 
@@ -881,7 +881,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.service = service;
         this.toastr = toastr;
         this.form = form;
-        this.path = _shared_service_path__WEBPACK_IMPORTED_MODULE_2__["Path"].path;
+        this.path = _shared_service_path_service__WEBPACK_IMPORTED_MODULE_2__["PathService"].path;
         this.imageFile = null;
         this.imageDef = '../../../assets/img/noimage.png';
         this.createForm();
@@ -1521,9 +1521,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var src_app_shared_service_path__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! src/app/shared/service/path */
-    "./src/app/shared/service/path.ts");
+    var src_app_shared_service_path_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! src/app/shared/service/path.service */
+    "./src/app/shared/service/path.service.ts");
     /* harmony import */
 
 
@@ -1708,7 +1708,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.service = service;
         this.form = form;
         this.toastr = toastr;
-        this.path = src_app_shared_service_path__WEBPACK_IMPORTED_MODULE_2__["Path"].path;
+        this.path = src_app_shared_service_path_service__WEBPACK_IMPORTED_MODULE_2__["PathService"].path;
         this.headElements = ['Изображение', 'ID', 'Название', 'Ссылка на инвестора', 'Редактировать'];
         this.imageFile = null;
         this.imageDef = '../../../assets/img/noimage.png';
@@ -2395,9 +2395,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var src_app_shared_service_path__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! src/app/shared/service/path */
-    "./src/app/shared/service/path.ts");
+    var src_app_shared_service_path_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! src/app/shared/service/path.service */
+    "./src/app/shared/service/path.service.ts");
     /* harmony import */
 
 
@@ -2573,7 +2573,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.serviceForService = serviceForService;
         this.toastr = toastr;
         this.form = form;
-        this.path = src_app_shared_service_path__WEBPACK_IMPORTED_MODULE_2__["Path"].path;
+        this.path = src_app_shared_service_path_service__WEBPACK_IMPORTED_MODULE_2__["PathService"].path;
         this.imageFile = null;
         this.imageDef = '../../../assets/img/noimage.png';
         this.ctreateForm();
@@ -3253,9 +3253,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _path__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! ./path */
-    "./src/app/shared/service/path.ts");
+    var _path_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! ./path.service */
+    "./src/app/shared/service/path.service.ts");
 
     var ArticleService =
     /*#__PURE__*/
@@ -3264,7 +3264,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _classCallCheck(this, ArticleService);
 
         this.http = http;
-        this.path = _path__WEBPACK_IMPORTED_MODULE_3__["Path"].path;
+        this.path = _path_service__WEBPACK_IMPORTED_MODULE_3__["PathService"].path;
       } // GET articles
 
 
@@ -3397,9 +3397,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _path__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! ./path */
-    "./src/app/shared/service/path.ts");
+    var _path_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! ./path.service */
+    "./src/app/shared/service/path.service.ts");
 
     var InvestorsService =
     /*#__PURE__*/
@@ -3408,7 +3408,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _classCallCheck(this, InvestorsService);
 
         this.http = http;
-        this.path = _path__WEBPACK_IMPORTED_MODULE_3__["Path"].path;
+        this.path = _path_service__WEBPACK_IMPORTED_MODULE_3__["PathService"].path;
       } // GET Investors
 
 
@@ -3522,9 +3522,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _path__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! ./path */
-    "./src/app/shared/service/path.ts");
+    var _path_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! ./path.service */
+    "./src/app/shared/service/path.service.ts");
 
     var KlasterService =
     /*#__PURE__*/
@@ -3533,7 +3533,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _classCallCheck(this, KlasterService);
 
         this.http = http;
-        this.path = _path__WEBPACK_IMPORTED_MODULE_3__["Path"].path;
+        this.path = _path_service__WEBPACK_IMPORTED_MODULE_3__["PathService"].path;
       } // GET Klaster
 
 
@@ -3604,28 +3604,54 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   },
 
   /***/
-  "./src/app/shared/service/path.ts":
-  /*!****************************************!*\
-    !*** ./src/app/shared/service/path.ts ***!
-    \****************************************/
+  "./src/app/shared/service/path.service.ts":
+  /*!************************************************!*\
+    !*** ./src/app/shared/service/path.service.ts ***!
+    \************************************************/
 
-  /*! exports provided: Path */
+  /*! exports provided: PathService */
 
   /***/
-  function srcAppSharedServicePathTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppSharedServicePathServiceTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony export (binding) */
 
 
-    __webpack_require__.d(__webpack_exports__, "Path", function () {
-      return Path;
+    __webpack_require__.d(__webpack_exports__, "PathService", function () {
+      return PathService;
     });
+    /* harmony import */
 
-    var Path = function Path() {
-      _classCallCheck(this, Path);
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+
+    var PathService = function PathService() {
+      _classCallCheck(this, PathService);
     };
+
+    PathService.ɵfac = function PathService_Factory(t) {
+      return new (t || PathService)();
+    };
+
+    PathService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
+      token: PathService,
+      factory: PathService.ɵfac,
+      providedIn: 'root'
+    });
+    /*@__PURE__*/
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](PathService, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
+        args: [{
+          providedIn: 'root'
+        }]
+      }], null, null);
+    })();
     /***/
 
   },
@@ -3670,9 +3696,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _path__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! ./path */
-    "./src/app/shared/service/path.ts");
+    var _path_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! ./path.service */
+    "./src/app/shared/service/path.service.ts");
 
     var ServicesService =
     /*#__PURE__*/
@@ -3681,7 +3707,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _classCallCheck(this, ServicesService);
 
         this.http = http;
-        this.path = _path__WEBPACK_IMPORTED_MODULE_3__["Path"].path;
+        this.path = _path_service__WEBPACK_IMPORTED_MODULE_3__["PathService"].path;
       } // GET Services
 
 

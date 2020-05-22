@@ -3,14 +3,14 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from "rxjs";
 import { Klaster } from '../../data/klaster';
 import { catchError, map } from 'rxjs/operators';
-import { Path } from './path';
+import { PathService } from './path.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class KlasterService {
 
-  path = Path.path;
+  path = PathService.path;
 
   constructor(private http: HttpClient) { }
 

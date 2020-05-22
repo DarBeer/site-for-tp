@@ -4,7 +4,7 @@ import { Component, OnInit, ViewChild, HostListener, AfterViewInit, ChangeDetect
 import { FormGroup,  FormBuilder,  Validators } from "@angular/forms";
 import { ToastrService } from 'ngx-toastr';
 
-import { Path } from '../../shared/service/path';
+import { PathService } from '../../shared/service/path.service';
 
 import { Article } from 'src/app/data/article';
 import { ArticleService } from 'src/app/shared/service/atricle.service';
@@ -16,7 +16,7 @@ import { ArticleService } from 'src/app/shared/service/atricle.service';
 })
 export class ArticlesDashboardComponent implements OnInit, AfterViewInit {
 
-  path = Path.path;
+  path = PathService.path;
 
   private errorMessage: string;
   articles: Article[];

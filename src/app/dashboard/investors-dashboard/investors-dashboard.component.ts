@@ -6,7 +6,7 @@ import { ToastrService } from 'ngx-toastr';
 import { Investor } from 'src/app/data/investor';
 import { InvestorsService } from 'src/app/shared/service/investors.service';
 
-import { Path } from 'src/app/shared/service/path';
+import { PathService } from 'src/app/shared/service/path.service';
 
 @Component({
   selector: 'app-investors-dashboard',
@@ -15,7 +15,7 @@ import { Path } from 'src/app/shared/service/path';
 })
 export class InvestorsDashboardComponent implements OnInit {
 
-  path = Path.path;
+  path = PathService.path;
 
   headElements = ['Изображение', 'ID', 'Название', 'Ссылка на инвестора', 'Редактировать'];
 

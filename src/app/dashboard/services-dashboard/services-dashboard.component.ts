@@ -5,7 +5,7 @@ import { ToastrService } from 'ngx-toastr';
 
 import { Service } from 'src/app/data/service';
 import { ServicesService } from 'src/app/shared/service/services.service';
-import { Path } from 'src/app/shared/service/path';
+import { PathService } from 'src/app/shared/service/path.service';
 
 @Component({
   selector: 'app-services-dashboard',
@@ -14,7 +14,7 @@ import { Path } from 'src/app/shared/service/path';
 })
 export class ServicesDashboardComponent implements OnInit {
   
-  path = Path.path;
+  path = PathService.path;
 
   services: Service[];
   service: Service;

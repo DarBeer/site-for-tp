@@ -367,7 +367,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ArticlesDashboardComponent", function() { return ArticlesDashboardComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
-/* harmony import */ var _shared_service_path__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared/service/path */ "./src/app/shared/service/path.ts");
+/* harmony import */ var _shared_service_path_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared/service/path.service */ "./src/app/shared/service/path.service.ts");
 /* harmony import */ var src_app_shared_service_atricle_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/shared/service/atricle.service */ "./src/app/shared/service/atricle.service.ts");
 /* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/__ivy_ngcc__/fesm2015/ngx-toastr.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
@@ -452,7 +452,7 @@ class ArticlesDashboardComponent {
         this.service = service;
         this.toastr = toastr;
         this.form = form;
-        this.path = _shared_service_path__WEBPACK_IMPORTED_MODULE_2__["Path"].path;
+        this.path = _shared_service_path_service__WEBPACK_IMPORTED_MODULE_2__["PathService"].path;
         this.imageFile = null;
         this.imageDef = '../../../assets/img/noimage.png';
         this.createForm();
@@ -761,7 +761,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InvestorsDashboardComponent", function() { return InvestorsDashboardComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
-/* harmony import */ var src_app_shared_service_path__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/shared/service/path */ "./src/app/shared/service/path.ts");
+/* harmony import */ var src_app_shared_service_path_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/shared/service/path.service */ "./src/app/shared/service/path.service.ts");
 /* harmony import */ var src_app_shared_service_investors_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/shared/service/investors.service */ "./src/app/shared/service/investors.service.ts");
 /* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/__ivy_ngcc__/fesm2015/ngx-toastr.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
@@ -851,7 +851,7 @@ class InvestorsDashboardComponent {
         this.service = service;
         this.form = form;
         this.toastr = toastr;
-        this.path = src_app_shared_service_path__WEBPACK_IMPORTED_MODULE_2__["Path"].path;
+        this.path = src_app_shared_service_path_service__WEBPACK_IMPORTED_MODULE_2__["PathService"].path;
         this.headElements = ['Изображение', 'ID', 'Название', 'Ссылка на инвестора', 'Редактировать'];
         this.imageFile = null;
         this.imageDef = '../../../assets/img/noimage.png';
@@ -1179,7 +1179,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ServicesDashboardComponent", function() { return ServicesDashboardComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
-/* harmony import */ var src_app_shared_service_path__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/shared/service/path */ "./src/app/shared/service/path.ts");
+/* harmony import */ var src_app_shared_service_path_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/shared/service/path.service */ "./src/app/shared/service/path.service.ts");
 /* harmony import */ var src_app_shared_service_services_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/shared/service/services.service */ "./src/app/shared/service/services.service.ts");
 /* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/__ivy_ngcc__/fesm2015/ngx-toastr.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
@@ -1264,7 +1264,7 @@ class ServicesDashboardComponent {
         this.serviceForService = serviceForService;
         this.toastr = toastr;
         this.form = form;
-        this.path = src_app_shared_service_path__WEBPACK_IMPORTED_MODULE_2__["Path"].path;
+        this.path = src_app_shared_service_path_service__WEBPACK_IMPORTED_MODULE_2__["PathService"].path;
         this.imageFile = null;
         this.imageDef = '../../../assets/img/noimage.png';
         this.ctreateForm();
@@ -1593,7 +1593,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
-/* harmony import */ var _path__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./path */ "./src/app/shared/service/path.ts");
+/* harmony import */ var _path_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./path.service */ "./src/app/shared/service/path.service.ts");
 
 
 
@@ -1603,7 +1603,7 @@ __webpack_require__.r(__webpack_exports__);
 class ArticleService {
     constructor(http) {
         this.http = http;
-        this.path = _path__WEBPACK_IMPORTED_MODULE_3__["Path"].path;
+        this.path = _path_service__WEBPACK_IMPORTED_MODULE_3__["PathService"].path;
     }
     // GET articles
     getArticles() {
@@ -1691,7 +1691,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
-/* harmony import */ var _path__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./path */ "./src/app/shared/service/path.ts");
+/* harmony import */ var _path_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./path.service */ "./src/app/shared/service/path.service.ts");
 
 
 
@@ -1701,7 +1701,7 @@ __webpack_require__.r(__webpack_exports__);
 class InvestorsService {
     constructor(http) {
         this.http = http;
-        this.path = _path__WEBPACK_IMPORTED_MODULE_3__["Path"].path;
+        this.path = _path_service__WEBPACK_IMPORTED_MODULE_3__["PathService"].path;
     }
     // GET Investors
     getInvestor() {
@@ -1768,7 +1768,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
-/* harmony import */ var _path__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./path */ "./src/app/shared/service/path.ts");
+/* harmony import */ var _path_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./path.service */ "./src/app/shared/service/path.service.ts");
 
 
 
@@ -1778,7 +1778,7 @@ __webpack_require__.r(__webpack_exports__);
 class KlasterService {
     constructor(http) {
         this.http = http;
-        this.path = _path__WEBPACK_IMPORTED_MODULE_3__["Path"].path;
+        this.path = _path_service__WEBPACK_IMPORTED_MODULE_3__["PathService"].path;
     }
     // GET Klaster
     getKlaster() {
@@ -1828,18 +1828,29 @@ KlasterService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineIn
 
 /***/ }),
 
-/***/ "./src/app/shared/service/path.ts":
-/*!****************************************!*\
-  !*** ./src/app/shared/service/path.ts ***!
-  \****************************************/
-/*! exports provided: Path */
+/***/ "./src/app/shared/service/path.service.ts":
+/*!************************************************!*\
+  !*** ./src/app/shared/service/path.service.ts ***!
+  \************************************************/
+/*! exports provided: PathService */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Path", function() { return Path; });
-class Path {
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PathService", function() { return PathService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+
+
+class PathService {
 }
+PathService.ɵfac = function PathService_Factory(t) { return new (t || PathService)(); };
+PathService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: PathService, factory: PathService.ɵfac, providedIn: 'root' });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](PathService, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
+        args: [{
+                providedIn: 'root'
+            }]
+    }], null, null); })();
 
 
 /***/ }),
@@ -1857,7 +1868,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
-/* harmony import */ var _path__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./path */ "./src/app/shared/service/path.ts");
+/* harmony import */ var _path_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./path.service */ "./src/app/shared/service/path.service.ts");
 
 
 
@@ -1867,7 +1878,7 @@ __webpack_require__.r(__webpack_exports__);
 class ServicesService {
     constructor(http) {
         this.http = http;
-        this.path = _path__WEBPACK_IMPORTED_MODULE_3__["Path"].path;
+        this.path = _path_service__WEBPACK_IMPORTED_MODULE_3__["PathService"].path;
     }
     // GET Services
     getServices() {
