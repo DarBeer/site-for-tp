@@ -16,7 +16,7 @@ export class KlasterService {
 
   // GET Klaster
   getKlaster(): Observable<Klaster> {
-    const uri = 'http://localhost:80/data/klaster';
+    const uri = 'http://tp.polessu.by/data/klaster';
     return this
         .http
         .get<Klaster>(uri)
@@ -27,7 +27,7 @@ export class KlasterService {
 
 // ADD Klaster
 addKlaster(name, description): Observable<Klaster> {
-    const uri = 'http://localhost:80/data/klaster/add';
+    const uri = 'http://tp.polessu.by/data/klaster/add';
     const headers = new HttpHeaders();
     const obj = {
         name: name,
@@ -43,7 +43,7 @@ addKlaster(name, description): Observable<Klaster> {
 
 // DELETE Klaster
 delKlaster(id:any) {
-    const uri = 'http://localhost:80/data/klaster/delete/' + id;
+    const uri = 'http://tp.polessu.by/data/klaster/delete/' + id;
     return this
         .http
         .get(uri)

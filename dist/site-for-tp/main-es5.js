@@ -3251,7 +3251,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(ArticleService, [{
         key: "getArticles",
         value: function getArticles() {
-          var uri = 'http://localhost:80/data/articles';
+          var uri = 'http://tp.polessu.by/data/articles';
           return this.http.get(uri).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) {
             return res;
           }));
@@ -3260,7 +3260,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "getArticle",
         value: function getArticle(id) {
-          var uri = 'http://localhost:80/data/articles/get-one/' + id;
+          var uri = 'http://tp.polessu.by/articles/get-one/' + id;
           return this.http.get(uri).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) {
             return res;
           }));
@@ -3268,7 +3268,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "getArticlesLast",
         value: function getArticlesLast() {
-          var uri = 'http://localhost:80/data/articles/last';
+          var uri = 'http://tp.polessu.by/data/articles/last';
           return this.http.get(uri).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) {
             return res;
           }));
@@ -3277,8 +3277,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "addArticle",
         value: function addArticle(heading, description, shortDescription, imageName, img) {
-          var uri = 'http://localhost:80/data/articles/add';
-          var uri_img = 'http://localhost:80/data/articles/upload';
+          var uri = 'http://tp.polessu.by/data/articles/add';
+          var uri_img = 'http://tp.polessu.by/data/articles/upload';
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
           var obj = {
             heading: heading,
@@ -3300,7 +3300,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "delArticle",
         value: function delArticle(id) {
-          var uri = 'http://localhost:80/data/articles/delete/' + id;
+          var uri = 'http://tp.polessu.by/data/articles/delete/' + id;
           return this.http.get(uri).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) {
             return res;
           }));
@@ -3393,7 +3393,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(InvestorsService, [{
         key: "getInvestor",
         value: function getInvestor() {
-          var uri = 'http://localhost:80/data/investors';
+          var uri = 'http://tp.polessu.by/data/investors';
           return this.http.get(uri).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) {
             return res;
           }));
@@ -3402,8 +3402,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "addInvestor",
         value: function addInvestor(name, urlToInv, imageName, img) {
-          var uri = 'http://localhost:80/data/investors/add';
-          var uri_img = 'http://localhost:80/data/investors/upload';
+          var uri = 'http://tp.polessu.by/data/investors/add';
+          var uri_img = 'http://tp.polessu.by/data/investors/upload';
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
           var obj = {
             name: name,
@@ -3423,7 +3423,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "delInvestor",
         value: function delInvestor(id) {
-          var uri = 'http://localhost:80/data/investors/delete/' + id;
+          var uri = 'http://tp.polessu.by/data/investors/delete/' + id;
           return this.http.get(uri).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) {
             return res;
           }));
@@ -3516,7 +3516,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(KlasterService, [{
         key: "getKlaster",
         value: function getKlaster() {
-          var uri = 'http://localhost:80/data/klaster';
+          var uri = 'http://tp.polessu.by/data/klaster';
           return this.http.get(uri).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) {
             return res;
           }));
@@ -3525,7 +3525,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "addKlaster",
         value: function addKlaster(name, description) {
-          var uri = 'http://localhost:80/data/klaster/add';
+          var uri = 'http://tp.polessu.by/data/klaster/add';
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
           var obj = {
             name: name,
@@ -3542,7 +3542,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "delKlaster",
         value: function delKlaster(id) {
-          var uri = 'http://localhost:80/data/klaster/delete/' + id;
+          var uri = 'http://tp.polessu.by/data/klaster/delete/' + id;
           return this.http.get(uri).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) {
             return res;
           }));
@@ -3690,7 +3690,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(ServicesService, [{
         key: "getServices",
         value: function getServices() {
-          var uri = 'http://localhost:80/data/services';
+          var uri = 'http://tp.polessu.by/data/services';
           return this.http.get(uri).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) {
             return res;
           }));
@@ -3699,7 +3699,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "getService",
         value: function getService(id) {
-          var uri = 'http://localhost:80/data/services/get-one/' + id;
+          var uri = 'http://tp.polessu.by/data/services/get-one/' + id;
           return this.http.get(uri).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) {
             return res;
           }));
@@ -3707,7 +3707,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "getServicesLast",
         value: function getServicesLast() {
-          var uri = 'http://localhost:80/data/services/last';
+          var uri = 'http://tp.polessu.by/data/services/last';
           return this.http.get(uri).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) {
             return res;
           }));
@@ -3716,8 +3716,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "addService",
         value: function addService(heading, description, shortDescription, imageName, img) {
-          var uri = 'http://localhost:80/data/services/add';
-          var uri_img = 'http://localhost:80/data/services/upload';
+          var uri = 'http://tp.polessu.by/data/services/add';
+          var uri_img = 'http://tp.polessu.by/data/services/upload';
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
           var obj = {
             heading: heading,
@@ -3738,7 +3738,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "delService",
         value: function delService(id) {
-          var uri = 'http://localhost:80/data/services/delete/' + id;
+          var uri = 'http://tp.polessu.by/data/services/delete/' + id;
           return this.http.get(uri).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) {
             return res;
           }));
@@ -5322,7 +5322,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       selectors: [["app-residents"]],
       decls: 121,
       vars: 0,
-      consts: [[1, "container"], [1, "row"], [1, "col-12", "how-to"], [1, "text-uppercase"], [1, "col-12", "privileges"], [1, "col-12"], [1, "row", "content"], [1, "item", "col-sm-12", "col-md-4"], [1, "icon"], ["src", "../../../assets/for-residents/become-resident-tax-icon1.png", "alt", "ico"], [1, "text"], ["src", "../../../assets/for-residents/become-resident-tax-icon2.png", "alt", "ico"], ["src", "../../../assets/for-residents/become-resident-tax-icon3.png", "alt", "ico"], [1, "col-12", "requirements"], ["fas", "", "icon", "check", 1, "icon"], [1, "col-12", "join"], [1, "stepper", "stepper-vertical"], [1, "circle"], [1, "label"], [1, "step-content", "grey", "lighten-3", "w-100"], [1, "col-12", "files"], [1, "col-md-3", "col-sm-12"], ["href", "http://localhost/uploads/docs/anketa.pdf"], ["far", "", "icon", "file-pdf", "size", "2x"], [1, "align-middle"], ["href", "http://localhost/uploads/docs/zayavlenie.pdf"], ["href", "http://localhost/uploads/docs/polojenie_o_sovete.pdf"], ["href", "http://localhost:3001/uploads/docs/reglament.pdf"]],
+      consts: [[1, "container"], [1, "row"], [1, "col-12", "how-to"], [1, "text-uppercase"], [1, "col-12", "privileges"], [1, "col-12"], [1, "row", "content"], [1, "item", "col-sm-12", "col-md-4"], [1, "icon"], ["src", "../../../assets/for-residents/become-resident-tax-icon1.png", "alt", "ico"], [1, "text"], ["src", "../../../assets/for-residents/become-resident-tax-icon2.png", "alt", "ico"], ["src", "../../../assets/for-residents/become-resident-tax-icon3.png", "alt", "ico"], [1, "col-12", "requirements"], ["fas", "", "icon", "check", 1, "icon"], [1, "col-12", "join"], [1, "stepper", "stepper-vertical"], [1, "circle"], [1, "label"], [1, "step-content", "grey", "lighten-3", "w-100"], [1, "col-12", "files"], [1, "col-md-3", "col-sm-12"], ["href", "http://tp.polessu.by/uploads/docs/anketa.pdf"], ["far", "", "icon", "file-pdf", "size", "2x"], [1, "align-middle"], ["href", "http://tp.polessu.by/uploads/docs/zayavlenie.pdf"], ["href", "http://tp.polessu.by/uploads/docs/polojenie_o_sovete.pdf"], ["href", "http://tp.polessu.by/uploads/docs/reglament.pdf"]],
       template: function ResidentsComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);

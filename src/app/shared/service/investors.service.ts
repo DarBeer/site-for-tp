@@ -16,7 +16,7 @@ export class InvestorsService {
 
   // GET Investors
   getInvestor(): Observable<Investor[]> {
-    const uri = 'http://localhost:80/data/investors';
+    const uri = 'http://tp.polessu.by/data/investors';
     return this
         .http
         .get<Investor[]>(uri)
@@ -27,8 +27,8 @@ export class InvestorsService {
 
 // ADD Investors
 addInvestor(name, urlToInv, imageName, img): Observable<Investor> {
-    const uri = 'http://localhost:80/data/investors/add';
-    const uri_img = 'http://localhost:80/data/investors/upload';
+    const uri = 'http://tp.polessu.by/data/investors/add';
+    const uri_img = 'http://tp.polessu.by/data/investors/upload';
     const headers = new HttpHeaders();
     const obj = {
         name: name,
@@ -48,7 +48,7 @@ addInvestor(name, urlToInv, imageName, img): Observable<Investor> {
 
 // DELETE Investors
 delInvestor(id:any) {
-    const uri = 'http://localhost:80/data/investors/delete/' + id;
+    const uri = 'http://tp.polessu.by/data/investors/delete/' + id;
     return this
         .http
         .get(uri)

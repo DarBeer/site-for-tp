@@ -1607,7 +1607,7 @@ class ArticleService {
     }
     // GET articles
     getArticles() {
-        const uri = 'http://localhost:80/data/articles';
+        const uri = 'http://tp.polessu.by/data/articles';
         return this
             .http
             .get(uri)
@@ -1617,7 +1617,7 @@ class ArticleService {
     }
     // GET article
     getArticle(id) {
-        const uri = 'http://localhost:80/data/articles/get-one/' + id;
+        const uri = 'http://tp.polessu.by/articles/get-one/' + id;
         return this
             .http
             .get(uri)
@@ -1626,7 +1626,7 @@ class ArticleService {
         }));
     }
     getArticlesLast() {
-        const uri = 'http://localhost:80/data/articles/last';
+        const uri = 'http://tp.polessu.by/data/articles/last';
         return this
             .http
             .get(uri)
@@ -1636,8 +1636,8 @@ class ArticleService {
     }
     // ADD article
     addArticle(heading, description, shortDescription, imageName, img) {
-        const uri = 'http://localhost:80/data/articles/add';
-        const uri_img = 'http://localhost:80/data/articles/upload';
+        const uri = 'http://tp.polessu.by/data/articles/add';
+        const uri_img = 'http://tp.polessu.by/data/articles/upload';
         const headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
         const obj = {
             heading: heading,
@@ -1657,7 +1657,7 @@ class ArticleService {
     }
     // DELETE article
     delArticle(id) {
-        const uri = 'http://localhost:80/data/articles/delete/' + id;
+        const uri = 'http://tp.polessu.by/data/articles/delete/' + id;
         return this
             .http
             .get(uri)
@@ -1705,7 +1705,7 @@ class InvestorsService {
     }
     // GET Investors
     getInvestor() {
-        const uri = 'http://localhost:80/data/investors';
+        const uri = 'http://tp.polessu.by/data/investors';
         return this
             .http
             .get(uri)
@@ -1715,8 +1715,8 @@ class InvestorsService {
     }
     // ADD Investors
     addInvestor(name, urlToInv, imageName, img) {
-        const uri = 'http://localhost:80/data/investors/add';
-        const uri_img = 'http://localhost:80/data/investors/upload';
+        const uri = 'http://tp.polessu.by/data/investors/add';
+        const uri_img = 'http://tp.polessu.by/data/investors/upload';
         const headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
         const obj = {
             name: name,
@@ -1734,7 +1734,7 @@ class InvestorsService {
     }
     // DELETE Investors
     delInvestor(id) {
-        const uri = 'http://localhost:80/data/investors/delete/' + id;
+        const uri = 'http://tp.polessu.by/data/investors/delete/' + id;
         return this
             .http
             .get(uri)
@@ -1782,7 +1782,7 @@ class KlasterService {
     }
     // GET Klaster
     getKlaster() {
-        const uri = 'http://localhost:80/data/klaster';
+        const uri = 'http://tp.polessu.by/data/klaster';
         return this
             .http
             .get(uri)
@@ -1792,7 +1792,7 @@ class KlasterService {
     }
     // ADD Klaster
     addKlaster(name, description) {
-        const uri = 'http://localhost:80/data/klaster/add';
+        const uri = 'http://tp.polessu.by/data/klaster/add';
         const headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
         const obj = {
             name: name,
@@ -1807,7 +1807,7 @@ class KlasterService {
     }
     // DELETE Klaster
     delKlaster(id) {
-        const uri = 'http://localhost:80/data/klaster/delete/' + id;
+        const uri = 'http://tp.polessu.by/data/klaster/delete/' + id;
         return this
             .http
             .get(uri)
@@ -1883,7 +1883,7 @@ class ServicesService {
     }
     // GET Services
     getServices() {
-        const uri = 'http://localhost:80/data/services';
+        const uri = 'http://tp.polessu.by/data/services';
         return this
             .http
             .get(uri)
@@ -1893,7 +1893,7 @@ class ServicesService {
     }
     // GET Services
     getService(id) {
-        const uri = 'http://localhost:80/data/services/get-one/' + id;
+        const uri = 'http://tp.polessu.by/data/services/get-one/' + id;
         return this
             .http
             .get(uri)
@@ -1902,7 +1902,7 @@ class ServicesService {
         }));
     }
     getServicesLast() {
-        const uri = 'http://localhost:80/data/services/last';
+        const uri = 'http://tp.polessu.by/data/services/last';
         return this
             .http
             .get(uri)
@@ -1912,8 +1912,8 @@ class ServicesService {
     }
     // ADD Services
     addService(heading, description, shortDescription, imageName, img) {
-        const uri = 'http://localhost:80/data/services/add';
-        const uri_img = 'http://localhost:80/data/services/upload';
+        const uri = 'http://tp.polessu.by/data/services/add';
+        const uri_img = 'http://tp.polessu.by/data/services/upload';
         const headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]();
         const obj = {
             heading: heading,
@@ -1932,7 +1932,7 @@ class ServicesService {
     }
     // DELETE Services
     delService(id) {
-        const uri = 'http://localhost:80/data/services/delete/' + id;
+        const uri = 'http://tp.polessu.by/data/services/delete/' + id;
         return this
             .http
             .get(uri)
@@ -2679,7 +2679,7 @@ class ResidentsComponent {
     }
 }
 ResidentsComponent.ɵfac = function ResidentsComponent_Factory(t) { return new (t || ResidentsComponent)(); };
-ResidentsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: ResidentsComponent, selectors: [["app-residents"]], decls: 121, vars: 0, consts: [[1, "container"], [1, "row"], [1, "col-12", "how-to"], [1, "text-uppercase"], [1, "col-12", "privileges"], [1, "col-12"], [1, "row", "content"], [1, "item", "col-sm-12", "col-md-4"], [1, "icon"], ["src", "../../../assets/for-residents/become-resident-tax-icon1.png", "alt", "ico"], [1, "text"], ["src", "../../../assets/for-residents/become-resident-tax-icon2.png", "alt", "ico"], ["src", "../../../assets/for-residents/become-resident-tax-icon3.png", "alt", "ico"], [1, "col-12", "requirements"], ["fas", "", "icon", "check", 1, "icon"], [1, "col-12", "join"], [1, "stepper", "stepper-vertical"], [1, "circle"], [1, "label"], [1, "step-content", "grey", "lighten-3", "w-100"], [1, "col-12", "files"], [1, "col-md-3", "col-sm-12"], ["href", "http://localhost/uploads/docs/anketa.pdf"], ["far", "", "icon", "file-pdf", "size", "2x"], [1, "align-middle"], ["href", "http://localhost/uploads/docs/zayavlenie.pdf"], ["href", "http://localhost/uploads/docs/polojenie_o_sovete.pdf"], ["href", "http://localhost:3001/uploads/docs/reglament.pdf"]], template: function ResidentsComponent_Template(rf, ctx) { if (rf & 1) {
+ResidentsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: ResidentsComponent, selectors: [["app-residents"]], decls: 121, vars: 0, consts: [[1, "container"], [1, "row"], [1, "col-12", "how-to"], [1, "text-uppercase"], [1, "col-12", "privileges"], [1, "col-12"], [1, "row", "content"], [1, "item", "col-sm-12", "col-md-4"], [1, "icon"], ["src", "../../../assets/for-residents/become-resident-tax-icon1.png", "alt", "ico"], [1, "text"], ["src", "../../../assets/for-residents/become-resident-tax-icon2.png", "alt", "ico"], ["src", "../../../assets/for-residents/become-resident-tax-icon3.png", "alt", "ico"], [1, "col-12", "requirements"], ["fas", "", "icon", "check", 1, "icon"], [1, "col-12", "join"], [1, "stepper", "stepper-vertical"], [1, "circle"], [1, "label"], [1, "step-content", "grey", "lighten-3", "w-100"], [1, "col-12", "files"], [1, "col-md-3", "col-sm-12"], ["href", "http://tp.polessu.by/uploads/docs/anketa.pdf"], ["far", "", "icon", "file-pdf", "size", "2x"], [1, "align-middle"], ["href", "http://tp.polessu.by/uploads/docs/zayavlenie.pdf"], ["href", "http://tp.polessu.by/uploads/docs/polojenie_o_sovete.pdf"], ["href", "http://tp.polessu.by/uploads/docs/reglament.pdf"]], template: function ResidentsComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);

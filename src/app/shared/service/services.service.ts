@@ -16,7 +16,7 @@ export class ServicesService {
 
     // GET Services
     getServices(): Observable<Service[]> {
-        const uri = 'http://localhost:80/data/services';
+        const uri = 'http://tp.polessu.by/data/services';
         return this
             .http
             .get<Service[]>(uri)
@@ -27,7 +27,7 @@ export class ServicesService {
 
     // GET Services
     getService(id:any): Observable<Service> {
-        const uri = 'http://localhost:80/data/services/get-one/' + id;
+        const uri = 'http://tp.polessu.by/data/services/get-one/' + id;
         return this
             .http
             .get<Service>(uri)
@@ -37,7 +37,7 @@ export class ServicesService {
     }
 
     getServicesLast(): Observable<Service[]> {
-        const uri = 'http://localhost:80/data/services/last';
+        const uri = 'http://tp.polessu.by/data/services/last';
         return this
             .http
             .get<Service[]>(uri)
@@ -48,8 +48,8 @@ export class ServicesService {
 
     // ADD Services
     addService(heading, description, shortDescription, imageName, img): Observable<Service> {
-        const uri = 'http://localhost:80/data/services/add';
-        const uri_img = 'http://localhost:80/data/services/upload';
+        const uri = 'http://tp.polessu.by/data/services/add';
+        const uri_img = 'http://tp.polessu.by/data/services/upload';
         const headers = new HttpHeaders();
         const obj = {
             heading: heading,
@@ -70,7 +70,7 @@ export class ServicesService {
 
     // DELETE Services
     delService(id:any) {
-        const uri = 'http://localhost:80/data/services/delete/' + id;
+        const uri = 'http://tp.polessu.by/data/services/delete/' + id;
         return this
             .http
             .get(uri)
