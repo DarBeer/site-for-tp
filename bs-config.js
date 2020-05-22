@@ -6,7 +6,7 @@ module.exports = {
     server: {
         baseDir: './dist/site-for-tp/',
         middleware: {
-            1: proxyMiddleware('/api', {
+            1: proxyMiddleware('/data', {
                 target: 'localhost:3001',
                 changeOrigin: true   // for vhosted sites, changes host header to match to target's host
             }),
