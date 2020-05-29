@@ -505,7 +505,7 @@ class ArticlesDashboardComponent {
         let imageName;
         if (this.imageFile !== null) {
             img.append('articleImage', this.imageFile, this.imageFile.name);
-            imageName = 'http://tp.polessu.by/uploads/article/' + this.imageFile.name;
+            imageName = 'http://tp.polessu.by/uploads/' + this.imageFile.name;
             this.service.addArticle(heading, description, shortDescription, imageName, img)
                 .subscribe(article => {
                 this.articles.push(article);
@@ -899,7 +899,7 @@ class InvestorsDashboardComponent {
         let imageName;
         if (this.imageFile !== null) {
             img.append('investorImage', this.imageFile, this.imageFile.name);
-            imageName = 'http://tp.polessu.by/uploads/investors/' + this.imageFile.name;
+            imageName = 'http://tp.polessu.by/uploads/' + this.imageFile.name;
             this.service.addInvestor(name, urlToInv, imageName, img)
                 .subscribe(investor => {
                 this.investors.push(investor);
@@ -1312,7 +1312,7 @@ class ServicesDashboardComponent {
         let imageName;
         if (this.imageFile !== null) {
             img.append('serviceImage', this.imageFile, this.imageFile.name);
-            imageName = 'http://tp.polessu.by/uploads/service/' + this.imageFile.name;
+            imageName = 'http://tp.polessu.by/uploads/' + this.imageFile.name;
             this.serviceForService.addService(heading, description, shortDescription, imageName, img)
                 .subscribe(service => {
                 this.services.push(service);
