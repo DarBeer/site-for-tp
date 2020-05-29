@@ -93,7 +93,7 @@ export class ArticlesDashboardComponent implements OnInit, AfterViewInit {
     let imageName;
     if (this.imageFile !== null) {
         img.append('articleImage', this.imageFile, this.imageFile.name);
-        imageName = this.path + '/uploads/article/' + this.imageFile.name;
+        imageName = 'http://tp.polessu.by/uploads/article/' + this.imageFile.name;
         this.service.addArticle(heading, description, shortDescription, imageName, img)
             .subscribe(
                 article => {

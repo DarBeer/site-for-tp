@@ -962,7 +962,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           if (this.imageFile !== null) {
             img.append('articleImage', this.imageFile, this.imageFile.name);
-            imageName = this.path + '/uploads/article/' + this.imageFile.name;
+            imageName = 'http://tp.polessu.by/uploads/article/' + this.imageFile.name;
             this.service.addArticle(heading, description, shortDescription, imageName, img).subscribe(function (article) {
               _this4.articles.push(article);
 
@@ -1774,7 +1774,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           if (this.imageFile !== null) {
             img.append('investorImage', this.imageFile, this.imageFile.name);
-            imageName = this.path + '/uploads/investors/' + this.imageFile.name;
+            imageName = 'http://tp.polessu.by/uploads/investors/' + this.imageFile.name;
             this.service.addInvestor(name, urlToInv, imageName, img).subscribe(function (investor) {
               _this8.investors.push(investor);
 
@@ -2637,7 +2637,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           if (this.imageFile !== null) {
             img.append('serviceImage', this.imageFile, this.imageFile.name);
-            imageName = this.path + '/uploads/service/' + this.imageFile.name;
+            imageName = 'http://tp.polessu.by/uploads/service/' + this.imageFile.name;
             this.serviceForService.addService(heading, description, shortDescription, imageName, img).subscribe(function (service) {
               _this15.services.push(service);
 

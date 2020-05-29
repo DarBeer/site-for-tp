@@ -85,7 +85,7 @@ export class ServicesDashboardComponent implements OnInit {
     let imageName;
     if (this.imageFile !== null) {
         img.append('serviceImage', this.imageFile, this.imageFile.name);
-        imageName = this.path + '/uploads/service/' + this.imageFile.name;
+        imageName = 'http://tp.polessu.by/uploads/service/' + this.imageFile.name;
         this.serviceForService.addService(heading, description, shortDescription, imageName, img)
             .subscribe(
                 service => {
