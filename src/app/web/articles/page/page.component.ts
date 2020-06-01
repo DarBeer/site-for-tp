@@ -5,6 +5,10 @@ import { Location } from '@angular/common';
 import { ArticleService } from '../../../shared/service/atricle.service';
 import { Article } from 'src/app/data/article';
 
+import { Metrika } from 'ng-yandex-metrika';
+import { Router, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs/operators';
+
 @Component({
   selector: 'app-page',
   templateUrl: './page.component.html',
@@ -17,8 +21,23 @@ export class PageComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private service: ArticleService,
-    private location: Location
-  ) { }
+    private location: Location,
+    private metrika: Metrika,
+    private router: Router,
+  ) {
+    let prevPath = location.path();
+    this.router
+    .events.pipe(
+      filter(event => (event instanceof NavigationEnd))
+    )
+    .subscribe(() => {
+      const newPath = location.path();
+      this.metrika.hit(newPath, {
+        referer: prevPath,
+      });
+      prevPath = newPath;
+    });
+  }
 
   ngOnInit(): void {
     this.getArticle();

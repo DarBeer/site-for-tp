@@ -32,6 +32,7 @@ import { AuthguardGuard } from './authguard.guard';
 import { KlasterComponent } from './web/klaster/klaster.component';
 import { KlasterDashboardComponent } from './dashboard/klaster-dashboard/klaster-dashboard.component';
 import { InvestorsDashboardComponent } from './dashboard/investors-dashboard/investors-dashboard.component';
+import { MetrikaModule } from 'ng-yandex-metrika';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,9 @@ import { InvestorsDashboardComponent } from './dashboard/investors-dashboard/inv
     InvestorsDashboardComponent,
   ],
   imports: [
+    MetrikaModule.forRoot(
+      {id: 64519312, webvisor: true}
+    ),
     ToastrModule.forRoot({
       positionClass: 'toast-bottom-right'
     }),
