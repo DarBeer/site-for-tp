@@ -232,7 +232,13 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
         _shared_service_user_service__WEBPACK_IMPORTED_MODULE_25__["UserService"],
         _shared_service_atricle_service__WEBPACK_IMPORTED_MODULE_26__["ArticleService"]
     ], imports: [[
-            ng_yandex_metrika__WEBPACK_IMPORTED_MODULE_31__["MetrikaModule"].forRoot({ id: 64519312, webvisor: true }),
+            ng_yandex_metrika__WEBPACK_IMPORTED_MODULE_31__["MetrikaModule"].forRoot({
+                id: 64519312,
+                clickmap: true,
+                trackLinks: true,
+                accurateTrackBounce: true,
+                webvisor: true
+            }),
             ngx_toastr__WEBPACK_IMPORTED_MODULE_18__["ToastrModule"].forRoot({
                 positionClass: 'toast-bottom-right'
             }),
@@ -292,7 +298,13 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
                     _dashboard_investors_dashboard_investors_dashboard_component__WEBPACK_IMPORTED_MODULE_30__["InvestorsDashboardComponent"],
                 ],
                 imports: [
-                    ng_yandex_metrika__WEBPACK_IMPORTED_MODULE_31__["MetrikaModule"].forRoot({ id: 64519312, webvisor: true }),
+                    ng_yandex_metrika__WEBPACK_IMPORTED_MODULE_31__["MetrikaModule"].forRoot({
+                        id: 64519312,
+                        clickmap: true,
+                        trackLinks: true,
+                        accurateTrackBounce: true,
+                        webvisor: true
+                    }),
                     ngx_toastr__WEBPACK_IMPORTED_MODULE_18__["ToastrModule"].forRoot({
                         positionClass: 'toast-bottom-right'
                     }),

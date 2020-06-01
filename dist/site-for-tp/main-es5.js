@@ -556,6 +556,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       providers: [_authguard_guard__WEBPACK_IMPORTED_MODULE_27__["AuthguardGuard"], _shared_service_user_service__WEBPACK_IMPORTED_MODULE_25__["UserService"], _shared_service_atricle_service__WEBPACK_IMPORTED_MODULE_26__["ArticleService"]],
       imports: [[ng_yandex_metrika__WEBPACK_IMPORTED_MODULE_31__["MetrikaModule"].forRoot({
         id: 64519312,
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
         webvisor: true
       }), ngx_toastr__WEBPACK_IMPORTED_MODULE_18__["ToastrModule"].forRoot({
         positionClass: 'toast-bottom-right'
@@ -578,6 +581,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           declarations: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"], _web_web_component__WEBPACK_IMPORTED_MODULE_8__["WebComponent"], _web_home_home_component__WEBPACK_IMPORTED_MODULE_9__["HomeComponent"], _web_articles_articles_component__WEBPACK_IMPORTED_MODULE_10__["ArticlesComponent"], _web_header_header_component__WEBPACK_IMPORTED_MODULE_11__["HeaderComponent"], _web_footer_footer_component__WEBPACK_IMPORTED_MODULE_12__["FooterComponent"], _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_13__["DashboardComponent"], _dashboard_home_dashboard_home_dashboard_component__WEBPACK_IMPORTED_MODULE_14__["HomeDashboardComponent"], _dashboard_articles_dashboard_articles_dashboard_component__WEBPACK_IMPORTED_MODULE_15__["ArticlesDashboardComponent"], _not_found_not_found_component__WEBPACK_IMPORTED_MODULE_16__["NotFoundComponent"], _web_articles_page_page_component__WEBPACK_IMPORTED_MODULE_17__["PageComponent"], _web_residents_residents_component__WEBPACK_IMPORTED_MODULE_20__["ResidentsComponent"], _web_services_services_component__WEBPACK_IMPORTED_MODULE_21__["ServicesComponent"], _dashboard_services_dashboard_services_dashboard_component__WEBPACK_IMPORTED_MODULE_22__["ServicesDashboardComponent"], _web_services_service_page_service_page_component__WEBPACK_IMPORTED_MODULE_23__["ServicePageComponent"], _login_login_component__WEBPACK_IMPORTED_MODULE_24__["LoginComponent"], _web_klaster_klaster_component__WEBPACK_IMPORTED_MODULE_28__["KlasterComponent"], _dashboard_klaster_dashboard_klaster_dashboard_component__WEBPACK_IMPORTED_MODULE_29__["KlasterDashboardComponent"], _dashboard_investors_dashboard_investors_dashboard_component__WEBPACK_IMPORTED_MODULE_30__["InvestorsDashboardComponent"]],
           imports: [ng_yandex_metrika__WEBPACK_IMPORTED_MODULE_31__["MetrikaModule"].forRoot({
             id: 64519312,
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
             webvisor: true
           }), ngx_toastr__WEBPACK_IMPORTED_MODULE_18__["ToastrModule"].forRoot({
             positionClass: 'toast-bottom-right'

@@ -58,7 +58,13 @@ import { MetrikaModule } from 'ng-yandex-metrika';
   ],
   imports: [
     MetrikaModule.forRoot(
-      {id: 64519312, webvisor: true}
+      {
+        id: 64519312,
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+      }
     ),
     ToastrModule.forRoot({
       positionClass: 'toast-bottom-right'
