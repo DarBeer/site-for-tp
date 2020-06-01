@@ -86,7 +86,7 @@ export class InvestorsDashboardComponent implements OnInit {
 
     if (this.imageFile !== null) {
       img.append('investorImage', this.imageFile, this.imageFile.name);
-      imageName = 'http://tp.polessu.by/uploads/' + this.imageFile.name;
+      imageName = 'http://tp.polessu.by/uploads/investors/' + this.imageFile.name;
 
       this.service.addInvestor(name, urlToInv, imageName, img)
           .subscribe(
