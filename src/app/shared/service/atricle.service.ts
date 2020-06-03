@@ -27,7 +27,7 @@ export class ArticleService {
 
     // GET article
     getArticle(id:any): Observable<Article> {
-        const uri = 'http://tp.polessu.by/articles/get-one/' + id;
+        const uri = 'http://tp.polessu.by/data/articles/get-one/' + id;
         return this
             .http
             .get<Article>(uri)

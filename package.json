@@ -25,6 +25,7 @@
     "@ckeditor/ckeditor5-angular": "^1.2.3",
     "@ckeditor/ckeditor5-build-classic": "^18.0.0",
     "@fortawesome/fontawesome-free": "^5.13.0",
+    "@kolkov/angular-editor": "^1.1.2",
     "@nguniversal/express-engine": "^9.1.0",
     "@tinymce/tinymce-angular": "^3.5.0",
     "@types/chart.js": "^2.9.18",

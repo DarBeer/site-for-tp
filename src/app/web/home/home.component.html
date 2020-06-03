@@ -4,12 +4,12 @@
       <a routerLink="/articles/{{article._id}}">
         <div class="view w-100">
           <img class="d-block w-100 img-fluid full-screan" src="{{article.urlImage}}" alt="First slide">
-          <div class="mask rgba-black-light waves-light" mdbWavesEffect></div>
+          <div mdbWavesEffect></div> <!-- class="mask rgba-black-light waves-light" -->
         </div>
       </a>
       <div class="carousel-caption">
-        <h3 class="h3-responsive">{{article.heading}}</h3>
-        <p>{{article.shortDescription}}</p>
+        <!-- <h3 class="h3-responsive">{{article.heading}}</h3>
+        <p>{{article.shortDescription}}</p> -->
       </div>
     </mdb-carousel-item>
   </mdb-carousel>
