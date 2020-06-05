@@ -59,37 +59,37 @@
 
     </div>
     <!-- Grid row -->
-
-    <div class="row">
-      <div class="col">
-        <h5 class="text-uppercase">Наши партнеры</h5>
+    <div *ngIf="!investors">
+      <div class="row">
+        <div class="col">
+          <h5 class="text-uppercase">Наши партнеры</h5>
+        </div>
       </div>
-    </div>
+
+      <!-- Grid row -->
+
+      <div class="row">
+        
+        <!--Grid column-->
+        <div class="col-lg-12 col-md-12 mb-4">
+          <ul class="list-group list-group-horizontal-sm">
+            <li *ngFor="let item of investors" class="list-group-item center">
+              <!--Image-->
+              <div class="view overlay z-depth-1-half">
+                <img src="{{item.urlImage}}" class="img-fluid" alt="{{item.name}}">
+                <a href="{{item.urlToInv}}" target="_blank">
+                  <div class="mask rgba-white-light" mdbWavesEffect></div>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+      </div>
 
     <!-- Grid row -->
-
-    <div class="row">
-      
-      <!--Grid column-->
-      <div class="col-lg-12 col-md-12 mb-4">
-        <ul class="list-group list-group-horizontal-sm">
-          <li *ngFor="let item of investors" class="list-group-item center">
-            <!--Image-->
-            <div class="view overlay z-depth-1-half">
-              <img src="{{item.urlImage}}" class="img-fluid" alt="{{item.name}}">
-              <a href="{{item.urlToInv}}" target="_blank">
-                <div class="mask rgba-white-light" mdbWavesEffect></div>
-              </a>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <!--Grid column-->
-
     </div>
-
-    <!-- Grid row -->
-
   </div>
   <!-- Footer Links -->
 

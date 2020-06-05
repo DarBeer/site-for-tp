@@ -42,6 +42,10 @@ articles: Article[];
   getArticles(): void {
     this.service.getArticles().subscribe(articles => {
       this.articles = articles;
+      articles.forEach(element => {
+        element.heading = element.heading.substr(0, 25) + "...";
+        element.shortDescription = element.shortDescription.substr(0, 60) + "...";
+      });
     });
   }
 

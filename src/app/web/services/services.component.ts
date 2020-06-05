@@ -42,6 +42,13 @@ export class ServicesComponent implements OnInit {
   getArticles(): void {
     this.service.getServices().subscribe(services => {
       this.services = services;
+      this.services.forEach(element => {
+        var maxShortDescriptionLenght = 100;
+        
+        if (maxShortDescriptionLenght < element.shortDescription.length) {
+          element.shortDescription = element.shortDescription.substr(0, maxShortDescriptionLenght) + "...";
+        }
+      });
     });
   }
 
