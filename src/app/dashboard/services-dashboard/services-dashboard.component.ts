@@ -21,6 +21,7 @@ export class ServicesDashboardComponent implements OnInit {
 
   serviceForm: FormGroup;
   editorContent: string;
+  editEditorContent: String;
   imageFile: File = null;
   imageDef: String = '../../../assets/img/noimage.png';
 

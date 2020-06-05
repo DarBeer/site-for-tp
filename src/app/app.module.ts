@@ -34,6 +34,7 @@ import { KlasterComponent } from './web/klaster/klaster.component';
 import { KlasterDashboardComponent } from './dashboard/klaster-dashboard/klaster-dashboard.component';
 import { InvestorsDashboardComponent } from './dashboard/investors-dashboard/investors-dashboard.component';
 import { MetrikaModule } from 'ng-yandex-metrika';
+import { ServiceEditDashboardComponent } from './dashboard/services-dashboard/service-edit-dashboard/service-edit-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { MetrikaModule } from 'ng-yandex-metrika';
     KlasterComponent,
     KlasterDashboardComponent,
     InvestorsDashboardComponent,
+    ServiceEditDashboardComponent,
   ],
   imports: [
     MetrikaModule.forRoot(

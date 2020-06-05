@@ -17,24 +17,27 @@ import { LoginComponent } from './login/login.component';
 import { KlasterDashboardComponent } from './dashboard/klaster-dashboard/klaster-dashboard.component';
 import { InvestorsDashboardComponent } from './dashboard/investors-dashboard/investors-dashboard.component';
 import { KlasterComponent } from './web/klaster/klaster.component';
+import { ServiceEditDashboardComponent } from './dashboard/services-dashboard/service-edit-dashboard/service-edit-dashboard.component';
 
 
 const routes: Routes = [
   { path: '',           component: WebComponent, children: [
-    { path: '',                 component: HomeComponent                },
-    { path: 'articles',         component: ArticlesComponent            },
-    { path: 'articles/:id',     component: PageComponent                },
-    { path: 'residents',        component: ResidentsComponent           },
-    { path: 'services',         component: ServicesComponent            },
-    { path: 'services/:id',     component: ServicePageComponent         },
-    { path: 'klaster',          component: KlasterComponent             }
+    { path: '',                 component: HomeComponent                        },
+    { path: 'articles',         component: ArticlesComponent                    },
+    { path: 'articles/:id',     component: PageComponent                        },
+    { path: 'residents',        component: ResidentsComponent                   },
+    { path: 'services',         component: ServicesComponent                    },
+    { path: 'services/:id',     component: ServicePageComponent                 },
+    { path: 'klaster',          component: KlasterComponent                     }
   ]},
   { path: 'dashboard',  component: DashboardComponent, canActivate: [AuthguardGuard], children: [
     { path: '', redirectTo: 'articles', pathMatch: 'full' },
-    { path: 'articles',         component: ArticlesDashboardComponent   },
-    { path: 'services',         component: ServicesDashboardComponent   },
-    { path: 'klaster',          component: KlasterDashboardComponent    },
-    { path: 'investors',        component: InvestorsDashboardComponent  }
+    { path: 'articles',         component: ArticlesDashboardComponent           },
+    
+    { path: 'services',         component: ServicesDashboardComponent           },
+    { path: 'services/:id',         component: ServiceEditDashboardComponent    },
+    { path: 'klaster',          component: KlasterDashboardComponent            },
+    { path: 'investors',        component: InvestorsDashboardComponent          }
   ]},
   { path: 'login',      component: LoginComponent             },
   { path: 'not-found',  component: NotFoundComponent          },

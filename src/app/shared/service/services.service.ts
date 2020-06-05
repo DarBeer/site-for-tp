@@ -25,7 +25,7 @@ export class ServicesService {
             }));
     }
 
-    // GET Services
+    // GET Service
     getService(id:any): Observable<Service> {
         const uri = 'http://tp.polessu.by/data/services/get-one/' + id;
         return this
@@ -62,7 +62,7 @@ export class ServicesService {
             .subscribe(res =>
                 console.log(res));
         return this.http
-            .post<Service>(uri, obj,{headers:headers})
+            .post<Service>(uri, obj, {headers:headers})
             .pipe(map(res => {
               return res;
             }))
@@ -71,12 +71,34 @@ export class ServicesService {
     // DELETE Services
     delService(id:any) {
         const uri = 'http://tp.polessu.by/data/services/delete/' + id;
-        return this
-            .http
-            .get(uri)
-            .pipe(map(res => {
-                return res;
-            }));
+        return this.http
+                   .get(uri)
+                   .pipe(map(res => {
+                       return res;
+                   }));
     }
+    
+    // UPDATE Services
+    updateService(id: any, heading, description, shortDescription, imageName, img): Observable<Service> {
+      const uri = 'http://tp.polessu.by/data/services/edit/' + id;
+      const uri_img = 'http://tp.polessu.by/data/services/upload';
+      const headers = new HttpHeaders();
+      const obj = {
+        heading: heading,
+        description: description,
+        shortDescription: shortDescription,
+        imgUrl: imageName
+      };
+      this.http
+          .post(uri_img, img)
+          .subscribe(res =>
+            console.log(res)
+          );
 
+      return this.http
+                 .post<Service>(uri, obj, {headers:headers})
+                 .pipe(map(res => {
+                    return res;
+                 }));
+    }
 }

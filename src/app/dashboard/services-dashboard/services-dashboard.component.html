@@ -64,7 +64,8 @@
                   <mdb-card-text> 
                     {{item.shortDescription}}
                   </mdb-card-text>
-              
+                  <a type="button" mdbBtn color="default" rounded="true" data-toggle="modal" data-target="#basicExample" routerLink="{{item._id}}" mdbWavesEffect><mdb-icon fas icon="pencil-alt"></mdb-icon></a>
+                  
                   <a mdbBtn class="button" (click)="delService(item._id)" mdbWavesEffect>Удалить</a>
                 </mdb-card-body>
               </mdb-card>
