@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "lite-server -c bs-config.js",
+    "dev2": "node node-runner.js",
     "ng": "ng",
     "start": "ng serve --port 80",
     "build": "ng build",
